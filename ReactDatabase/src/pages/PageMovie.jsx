@@ -1,5 +1,7 @@
+import "./PageMovie.css"
+
 function PageMovie() {
-    <div>PageMovie</div>
+    return <div>PageMovie</div>
 }
 
 export default PageMovie;
