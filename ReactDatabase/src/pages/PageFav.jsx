@@ -1,4 +1,4 @@
-import "./PageFavourites.css"
+import "./PageFav.css"
 
 function PageFavourites() {
     return <div>PageFavourites</div>
