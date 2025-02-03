@@ -1,8 +1,15 @@
 import "./PageHome.css";
 import logo from "../assets/logo.svg";
+// import { useEffect, useState } from "react";
+// import Movies from "../components/Movies";
+// import { getPopularMovies } from "../utilities/api"
 
 
 function PageHome () {
+
+   
+
+
 
     return (
 
