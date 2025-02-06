@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="604" height="604" viewBox="0 0 604 604">
+        <defs>
+          <filter id="logo_circle" x="0" y="0" width="604" height="604" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="15" result="blur"/>
+            <feFlood flood-color="#fff" flood-opacity="0.502"/>
+            <feComposite operator="in" in2="blur"/>
+          </filter>
+          <filter id="logo_circle-2" x="0" y="0" width="604" height="604" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="15" result="blur-2"/>
+            <feFlood flood-color="#fff" flood-opacity="0.4" result="color"/>
+            <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+            <feComposite operator="in" in="color"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+          </filter>
+          <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#8baabb"/>
+            <stop offset="0.647" stop-color="#809cac"/>
+            <stop offset="1" stop-color="#46555e"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#809cac"/>
+            <stop offset="0.622" stop-color="#809cac"/>
+            <stop offset="1" stop-color="#8baabb"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#809cac"/>
+            <stop offset="0.549" stop-color="#809cac"/>
+            <stop offset="1" stop-color="#46555e"/>
+          </linearGradient>
+        </defs>
+        <g id="Logo" transform="translate(27.294 95.022)">
+          <g data-type="innerShadowGroup">
+            <g transform="matrix(1, 0, 0, 1, -27.29, -95.02)" filter="url(#logo_circle)">
+              <g id="logo_circle-3" data-name="logo circle" transform="translate(45 42)" fill="#141414" stroke="#fff" stroke-width="15">
+                <circle cx="257" cy="257" r="257" stroke="none"/>
+                <circle cx="257" cy="257" r="249.5" fill="none"/>
+              </g>
+            </g>
+            <circle id="logo_circle-4" data-name="logo circle" cx="257" cy="257" r="257" transform="translate(17.706 -53.022)" fill="#141414"/>
+            <g transform="matrix(1, 0, 0, 1, -27.29, -95.02)" filter="url(#logo_circle-2)">
+              <circle id="logo_circle-5" data-name="logo circle" cx="257" cy="257" r="257" transform="translate(45 42)" fill="#fff"/>
+            </g>
+            <g id="logo_circle-6" data-name="logo circle" transform="translate(17.706 -53.022)" fill="none" stroke="#fff" stroke-width="15">
+              <circle cx="257" cy="257" r="257" stroke="none"/>
+              <circle cx="257" cy="257" r="249.5" fill="none"/>
+            </g>
+          </g>
+          <g id="innertriangle" transform="translate(416.169 54.57) rotate(90)">
+            <path id="Path_4" data-name="Path 4" d="M71.347,0,216.3,83.461H0Z" transform="translate(39.369 148.077)" fill="url(#linear-gradient)"/>
+            <path id="Path_5" data-name="Path 5" d="M68.063,0,240.1,24.322,0,68.427Z" transform="translate(189.571 249.63) rotate(-105)" opacity="0.8" fill="url(#linear-gradient-2)"/>
+            <path id="Path_7" data-name="Path 7" d="M50.659,240.6,0,0,63.175,61.4Z" transform="matrix(0.777, 0.629, -0.629, 0.777, 151.413, 13.308)" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+      </svg>
