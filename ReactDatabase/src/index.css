@@ -369,3 +369,41 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* !! Custom Settings !! */
+  @font-face {
+    font-family: 'OverusedG-Black';
+    src: url(./fonts/OverusedGrotesk-Black.otf); 
+  }
+
+  @font-face {
+    font-family: 'OverusedG-Bold';
+    src: url(./fonts/OverusedGrotesk-Bold.otf);
+  }
+
+  @font-face {
+    font-family: 'OverusedG-Med';
+    src: url(./fonts/OverusedGrotesk-Medium.otf);
+  }
+
+  @font-face {
+    font-family: 'NeueM-Bold';
+    src: url(./fonts/PPNeueMontreal-Bold.otf);
+  }
+
+  @font-face {
+    font-family: 'NeueM-Med';
+    src: url(./fonts/PPNeueMontreal-Medium.otf);
+  }
+
+  @font-face {
+    font-family: 'NeueM-Thin';
+    src: url(./fonts/PPNeueMontreal-Thin.otf);
+  }
+
+
+   /* !! Background Settings !! */
+   body {
+    background: linear-gradient(180deg, rgb(55, 27, 55) 0%, rgb(121, 102, 121) 100%);
+    min-height: 100vh;
+   }

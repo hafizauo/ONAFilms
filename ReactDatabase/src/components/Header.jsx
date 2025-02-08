@@ -39,9 +39,9 @@ function Header() {
             <div className={`overlay ${isMenuOpen ? 'active' : ''}`} id="menuOverlay">
                 <div className="overlay-content">
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/favourites">Favourites</Link></li>
-                        <li><Link to="/about">About</Link></li>
+                        <li className="menu-item"><Link to="/">Home</Link></li>
+                        <li className="menu-item"><Link to="/favourites">Favourites</Link></li>
+                        <li className="menu-item"><Link to="/about">About</Link></li>
                         {/* <li><Link to="/movie/1">Movie</Link></li> */}
                     </ul>
                 </div>
