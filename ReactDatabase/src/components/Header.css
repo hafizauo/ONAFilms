@@ -1,3 +1,56 @@
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+
+
+/* [1] Header & Navigation */
+
+/* [1] Header & Navigation */
+nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0.5rem; */
+    background-color: rgb(0, 0, 0);
+    
+    font-size: 20px;
+    text-decoration: none;
+
+    font-family: 'NonB-Extend-SemiBold';
+    letter-spacing: 0.5px;
+}
+
+nav li {
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0; 
+}
+
+nav a {
+    text-decoration: none; 
+    padding: 20px 20px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ona-film-logo {
     height: 50px;
     width: 50px;
