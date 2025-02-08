@@ -1,18 +1,18 @@
 /* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
 
 
-/* [1] Header & Navigation */
 
 /* [1] Header & Navigation */
 nav {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    /* padding: 0.5rem; */
-    background-color: rgb(0, 0, 0);
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
     
     font-size: 20px;
     text-decoration: none;
+    align-items: center;
 
     font-family: 'NonB-Extend-SemiBold';
     letter-spacing: 0.5px;
@@ -27,31 +27,172 @@ nav ul {
     padding: 0; 
 }
 
-nav a {
+nav ul a {
     text-decoration: none; 
     padding: 20px 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .ona-film-logo {
     height: 50px;
     width: 50px;
+}
+
+
+/* [2] Hamburger Menu  */
+/* Codepen Link: https://codepen.io/ainalem/pen/LJYRxz */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+    
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+    transition: 0.8s;
+}
+
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+    transition: 0.8s;
+}
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+    transition: 0.8s;
+}
+
+.ham8.active .top {
+    stroke-dashoffset: -64px;
+    stroke:#000000;
+    transition: 0.4s;
+}
+
+.ham8.active .middle {
+    stroke:#000000;
+    transform: rotate(90deg);
+    transition: 0.4s;
+}
+
+.ham8.active .bottom {
+    stroke:#000000;
+    stroke-dashoffset: -64px;
+    transition: 0.4s;
+}
+
+/* [2.1] Overlay Activation (w/ Burger Menu) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 250, 0.9); 
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+    --webkit-backdrop-filter: blur(4px); /* Legacy Webkit */
+    backdrop-filter: blur(4px); /* Legacy Webkit */
+}
+
+.overlay.active {
+    transform: translateX(-100%); 
+}
+
+.overlay-content {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.overlay-content ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 20px;
+    font-family: 'NonB-Extend-Thin';
+    font-size: 50px;
+}
+
+.overlay-content a { 
+    color: rgb(0, 0, 0);   
+    text-decoration: none;
+}
+
+
+body {
+    background-color: red;
+}
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+
+    /* [1] Header & Navigation */
+    nav { 
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none; 
+        font-family: 'NonB-Extend-SemiBold';
+        letter-spacing: 0.5px;
+    }
+
+    nav ul {
+        /* margin: 0 auto; */
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav ul a {
+        color: rgb(0, 0, 0);   
+        text-decoration: none; 
+        transition: 0.4s;
+        padding: 20px 20px;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        color: rgba(35, 35, 35, 0.322);
+    }
+
+    nav li, .link {
+        display: block;
+    }
+
+    /* [2] Hamburger Menu */
+    .ham {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
 }
