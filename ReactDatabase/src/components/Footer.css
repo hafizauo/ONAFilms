@@ -2,7 +2,7 @@
 footer {
     background-color: rgb(53, 29, 49);
 }
-.footer-section {
+  .footer-section {
     display: flex;
     flex-direction: column; 
   }
@@ -15,40 +15,50 @@ footer {
 
   .f-list-heading {
     list-style: none;
-    font-family: 'Endgraph-Medium';
+    font-family: 'NeueM-Bold';
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    color: white;
   }
 
   .bold-list {
     list-style: none;
-    font-size: 1.5rem;
-    font-family: 'Endgraph-Regular';
+    font-size: 1.2rem;
+    font-family: 'NeueM-Med';
   }
 
   .sub-list {
-    font-size: 1.5rem;
-    font-family: 'Endgraph-Light';
+    font-size: 1.2rem;
+    font-family: 'NeueM-Thin';
+    color: white;
   }
   
   .sub-list a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 
   .copyright {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 20px;
+    padding: 20px;
     
 
-    font-family: 'Endgraph-Regular';
+    font-family: 'NeueM-Thin';
     text-transform: uppercase;
     font-size: 1em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     opacity: 0.6;
   }
+
+  .list-line {
+    width: 100%; /* Make the line span the entire width of the container */
+    background: rgba(226, 226, 226, 0.364);
+    height: 1px;
+    margin-top: 10px; /* Adjust as per your design */
+    margin-bottom: 10px; /* Adjust as per your design */
+  } 
 
 
   /* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
@@ -72,37 +82,37 @@ footer {
 
   .f-list-heading {
     list-style: none;
-    font-family: 'Endgraph-Medium';
+    font-family: 'NeueM-Bold';
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 1.3rem;
   }
 
   .bold-list {
     list-style: none;
-    font-size: 2rem;
-    font-family: 'Endgraph-Regular';
+    font-size: 1.3rem;
+    font-family: 'NeueM-Med';
   }
 
   .sub-list {
-    font-size: 1.7rem;
-    font-family: 'Endgraph-Light';
+    font-size: 1.5rem;
+    font-family: 'NeueM-Thin'
   }
 
   .sub-list a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
   }
 
   .copyright {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin: 40px;
+    padding: 40px;
 
-    font-family: 'Endgraph-Regular';
+    font-family: 'NeueM-Thin';
     text-transform: uppercase;
     font-size: 1em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     opacity: 0.6;
   }
 }
@@ -153,14 +163,13 @@ footer {
     opacity: 0.7;
   }
 
-
   .copyright {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin: 40px;
+    padding: 40px;
 
-    font-family: 'Endgraph-Regular';
+    font-family: 'NeueM-Thin';
     text-transform: uppercase;
     font-size: 1em;
     color: rgb(255, 255, 255);
