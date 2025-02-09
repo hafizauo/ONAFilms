@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -9,10 +10,10 @@ function Footer() {
                           <section className="footer-content">
                             <li className="f-list-heading">Navigation</li>
                             <div className="list-line"></div>
-                            <li className="sub-list"><a href="index.html">Homepage</a></li>
-                            <li className="sub-list"><a href="#Courses">Favourites</a></li>
-                            <li className="sub-list"><a href="#Review">About Us</a></li>
-                            <li className="sub-list"><a href="#Contact">Login</a></li>
+                            <li className="sub-list"><Link to="/">Homepage</Link></li>
+                            <li className="sub-list"><Link to="/favourites">Favourites</Link></li>
+                            <li className="sub-list"><Link to="/about">About Us</Link></li>
+                            <li className="sub-list"><Link to="/login">Login</Link></li>
                           </section>
 
                           <br />
@@ -23,7 +24,7 @@ function Footer() {
                             <li className="sub-list"><span className="bold-list">Email:</span>&nbsp;onafilms@gmail.com</li>
                             <li className="sub-list"><span className="bold-list">Phone:</span>&nbsp;+ 1 234 5678</li>
                             <li className="sub-list"><span className="bold-list">Telegram:</span>&nbsp;OnaFilms@123</li>
-                            <li className="sub-list"><span className="bold-list">Facebook:</span>&nbsp;Muhammad-Junaid</li>
+                            <li className="sub-list"><span className="bold-list">Facebook:</span>&nbsp;OnaFilmsFB25</li>
                           </section>
 
                           <br />
@@ -31,11 +32,10 @@ function Footer() {
                           <section className="footer-content">
                             <li className="f-list-heading">Socials</li>
                             <div className="list-line"></div>
-                            <li className="sub-list"><span className="bold-list">Instagram:</span><a href="index.html">&nbsp;OnaFilms25</a></li>
-                            <li className="sub-list"><span className="bold-list">Facebook:</span><a href="#Courses">&nbsp;OnaFilmss</a></li>
-                            <li className="sub-list"><span className="bold-list">Twitter(X):</span><a href="#Review">&nbsp;RealOnaFilms</a></li>
-                            <li className="sub-list"><span className="bold-list">TikTok:</span><a href="#Contact">&nbsp;OnaFilms</a></li>
-                            
+                            <li className="sub-list"><span className="bold-list">Instagram:</span><Link to="/">&nbsp;OnaFilms25</Link></li>
+                            <li className="sub-list"><span className="bold-list">Facebook:</span><Link to="/">&nbsp;OnaFilmss</Link></li>
+                            <li className="sub-list"><span className="bold-list">Twitter(X):</span><Link to="/">&nbsp;RealOnaFilms</Link></li>
+                            <li className="sub-list"><span className="bold-list">TikTok:</span><Link to="/">&nbsp;OnaFilms</Link></li>
                           </section>
 
                         </article>

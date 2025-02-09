@@ -64,48 +64,32 @@ nav ul a {
 .line {
     fill:none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke:#000000;
+    stroke:#ffffff;
     stroke-width:5.5;
     stroke-linecap:round;
     
 }
 
-.ham8 .top {
-    stroke-dasharray: 40 160;
+.ham4 .top {
+    stroke-dasharray: 40 121;
     transition: 0.8s;
 }
-
-.ham8 .middle {
-    stroke-dasharray: 40 142;
-    transform-origin: 50%;
-    transition: transform 400ms;
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
     transition: 0.8s;
 }
-
-.ham8 .bottom {
-    stroke-dasharray: 40 85;
-    transform-origin: 50%;
-    transition: transform 400ms, stroke-dashoffset 400ms;
-    transition: 0.8s;
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+    stroke:#000000;
+    transition: 0.4s;
 }
-
-.ham8.active .top {
-    stroke-dashoffset: -64px;
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
     stroke:#000000;
     transition: 0.4s;
 }
 
-.ham8.active .middle {
-    stroke:#000000;
-    transform: rotate(90deg);
-    transition: 0.4s;
-}
-
-.ham8.active .bottom {
-    stroke:#000000;
-    stroke-dashoffset: -64px;
-    transition: 0.4s;
-}
+    
 
 /* [2.1] Overlay Activation (w/ Burger Menu) */
 .overlay {
