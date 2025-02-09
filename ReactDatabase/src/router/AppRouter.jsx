@@ -15,6 +15,7 @@ function AppRouter() {
                     <Route path="/favourites" element={<PageFavourites />} />
                     <Route path="/about" element={<PageAbout />} />
                     <Route path="/movie/:id" element={<PageMovie />} />
+                    
                 </Routes>
             <Footer/>
         </BrowserRouter>

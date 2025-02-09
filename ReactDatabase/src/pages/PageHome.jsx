@@ -12,11 +12,12 @@ function PageHome () {
 
 
     return (
-
-        <section>
-            <div>PageMovie</div>
-            <img src={logo} alt="logo" className="logo"></img> 
-        </section>
+        
+            
+            <section>
+                <div>PageMovie</div>
+                <img src={logo} alt="logo" className="logo"></img> 
+            </section>
         
     )
     

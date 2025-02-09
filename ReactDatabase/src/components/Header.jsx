@@ -5,6 +5,8 @@ import useHamburgerMenu from "../globals/hamburgermenu";
 import "./Header.css"
 import logo from "../assets/logo.svg";
 
+
+
 function Header() {
     const { isMenuOpen, toggleMenu } = useHamburgerMenu() || {};
 
@@ -30,6 +32,7 @@ function Header() {
                     <path className="line middle" d="m 30,50 h 40" />
                     <path className="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
                 </svg>
+
 
             </nav>
 
