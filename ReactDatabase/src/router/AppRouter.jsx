@@ -25,7 +25,7 @@ const AppRouter = () => {
   };
 
   useEffect(() => {
-    if (!isLoggedIn && location.pathname !== '/login') {
+    if (!isLoggedIn && !['/login', '/'].includes(location.pathname)) {
       navigate('/login');
     }
   }, [isLoggedIn, location.pathname, navigate]);
