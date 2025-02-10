@@ -31,8 +31,17 @@
     padding-top: 2rem;
   }
 
-  .login-button,
-  .signup-button {
+  button.login-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  button.signup-button {
     width: 100px;
     padding: 1rem;
     background-color: #4a3271;
@@ -74,7 +83,8 @@
   h2 {
     display: flex;
     align-items: center;
-    padding-right: 13rem;
+    padding-right: 10rem;
+    color: white;
   }
   p {
     padding-right: 2rem;
@@ -106,11 +116,12 @@
     padding-left: 0.8rem;
   }
   .logo {
-    padding-right: 14.25rem;
+    padding-right: 11rem;
+    width: 150px;
+    height: 150px;
   }
 }
 /* desktop sizes  */
-
 
 @media (min-width: 64em) and (max-width: 200.99em) {
   .button-container {
@@ -127,7 +138,7 @@
     align-items: center;
     height: 100vh;
   }
-  
+
   .logo {
     width: 250px; /* 100px */
     height: 250px; /* 100px */
@@ -137,7 +148,7 @@
     top: 10.5rem;
     left: 7rem;
   }
-  
+
   h1 {
     display: flex;
     align-items: center;
@@ -146,8 +157,9 @@
     font-size: 3.3em;
     left: 13rem;
     position: relative;
+    color: white;
   }
-  
+
   h2 {
     display: flex;
     align-items: center;
@@ -156,8 +168,9 @@
     font-size: 2.5em;
     left: 13rem;
     position: relative;
+    color: white;
   }
-  
+
   p {
     padding-right: 2rem;
     color: white;
@@ -165,7 +178,7 @@
     left: 13rem;
     position: relative;
   }
-  
+
   .login-button {
     width: 100px;
     padding: 1rem;
@@ -176,7 +189,7 @@
     cursor: pointer;
     font-size: 1.2em;
   }
-  
+
   .signup-button {
     width: 100px;
     padding: 1rem;
