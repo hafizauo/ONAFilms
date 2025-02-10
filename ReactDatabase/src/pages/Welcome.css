@@ -1,0 +1,203 @@
+/* mobile sizes */
+@media (min-width: 20em) and (max-width: 48em) {
+  body {
+    background: linear-gradient(
+      180deg,
+      rgb(55, 27, 55) 0%,
+      rgb(121, 102, 121) 100%
+    );
+    min-height: 100vh;
+  }
+
+  .logo {
+    width: 8.25em; /* 100px */
+    height: 6.25em; /* 100px */
+    display: inline-block; /* Prevents centering */
+  }
+
+  h1,
+  h2 {
+    padding-left: 2rem;
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 1.25rem;
+    padding-top: 2rem;
+  }
+
+  button.login-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  button.signup-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: #15c57c;
+  }
+
+  p {
+    color: white;
+    padding-left: 2rem;
+    padding-top: 1em;
+    font-size: 0.8rem;
+  }
+  .welcome-container {
+    position: relative;
+    padding-bottom: 0.625em;
+  }
+}
+
+/*  tablet sizes */
+@media (min-width: 48.01em) and (max-width: 63.99em) {
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1,
+  h2 {
+    display: flex;
+    align-items: center;
+    padding-right: 10rem;
+    color: white;
+  }
+  p {
+    padding-right: 2rem;
+    color: white;
+  }
+  .login-button,
+  .signup-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: #15c57c;
+  }
+  .button-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-right: 5.25rem;
+  }
+  h1 {
+    padding-left: 0.8rem;
+  }
+  .logo {
+    padding-right: 11rem;
+    width: 150px;
+    height: 150px;
+  }
+}
+/* desktop sizes  */
+
+@media (min-width: 64em) and (max-width: 200.99em) {
+  .button-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 21.25rem;
+  }
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .logo {
+    width: 250px; /* 100px */
+    height: 250px; /* 100px */
+    display: inline-block; /* Prevents centering */
+    padding-right: 14.25rem;
+    position: fixed;
+    top: 10.5rem;
+    left: 7rem;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    padding-right: 5rem;
+    color: white;
+    font-size: 3.3em;
+    left: 13rem;
+    position: relative;
+    color: white;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    padding-right: 7.5rem;
+    color: white;
+    font-size: 2.5em;
+    left: 13rem;
+    position: relative;
+    color: white;
+  }
+
+  p {
+    padding-right: 2rem;
+    color: white;
+    font-size: 1rem;
+    left: 13rem;
+    position: relative;
+  }
+
+  .login-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+  .signup-button {
+    width: 100px;
+    padding: 1rem;
+    background-color: #4a3271;
+    color: white;
+    border: none;
+    border-radius: 0.9375em; /* 15px */
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+}
