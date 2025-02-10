@@ -73,7 +73,10 @@ body {
     font-size: 0.8rem;
     display: flex;
   }
-  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* tablet */
 @media (min-width: 48.01em) and (max-width: 63.99em) {
