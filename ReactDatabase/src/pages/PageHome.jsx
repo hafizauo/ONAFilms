@@ -16,6 +16,7 @@ function PageHome () {
         <section>
             <div>PageMovie</div>
             <img src={logo} alt="logo" className="logo"></img> 
+            <h1>Home</h1>
         </section>
         
     )
