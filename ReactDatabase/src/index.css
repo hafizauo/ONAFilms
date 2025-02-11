@@ -405,5 +405,10 @@
    /* !! Background Settings !! */
    body {
     background: linear-gradient(180deg, rgb(55, 27, 55) 0%, rgb(121, 102, 121) 100%) no-repeat;
-    height: auto;
+    height: 100%;
+   }
+
+   /* !! Main Tags For (Welcome & Login Pages) */
+   main {
+    height: 100vh;
    }

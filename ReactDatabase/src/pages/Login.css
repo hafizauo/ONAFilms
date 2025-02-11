@@ -1,5 +1,29 @@
 
-body {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   background: linear-gradient(
     180deg,
     rgb(55, 27, 55) 0%,
@@ -9,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
 }  
-/* mobile */
+
 @media (min-width: 20em) and (max-width: 48em) {
   .logo {
     width: 100px;
@@ -78,18 +102,18 @@ body {
     flex-direction: column;
   }
 }
-/* tablet */
+
 @media (min-width: 48.01em) and (max-width: 63.99em) {
   .logo {
-    width: 250px; /* 100px */
-    height: 250px; /* 100px */
+    width: 250px; 
+    height: 250px;
    
   }
 
   h1,
   h2 {
  
-  }
+  } 
 
   .account {
 
@@ -113,4 +137,4 @@ body {
  
   }
   
-}
+} */

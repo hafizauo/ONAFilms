@@ -17,31 +17,36 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <div className="login-container">
+    <main className="login-container">
       <img src={logo} alt="logo" className="logo" />
       <h1>Welcome back!</h1>
       <p className="account">Log into your account below</p>
-      <section className="maincontainer">
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="Username:"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="input-field"
-        />
-        <input
-          type="password"
-          placeholder="Enter Password:"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="input-field"
-        />
-        <button type="submit" className="login-button">Login</button>
-      </form>
-      <p className='create'>create an account</p>
-      </section>
-    </div>
+
+        <section className="main-container">
+
+          <form onSubmit={handleLogin}>
+            <input
+              type="text"
+              placeholder="Username:"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="input-field"/>
+
+            <input
+              type="password"
+              placeholder="Enter Password:"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="input-field"/>
+
+            <button type="submit" className="login-button">Login</button>
+          </form>
+
+          <p className='create'>Create An Account</p>
+
+        </section>
+
+    </main>
   );
 };
 
