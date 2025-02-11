@@ -18,26 +18,37 @@
 
 .WelcomeMain3 h1, h2 {
   margin: 0;
+  color: white;
+}
+.WelcomeMain3 h1 {
+  font-family: 'OverusedG-Bold';
 }
 
 .WelcomeMain3 h2 {
   font-size: 2.5rem;
+  font-family: 'OverusedG-Med';
+  text-transform: uppercase;
 }
 
 .WelcomeMain3 p {
   font-size: 1.5rem;
+  font-family: 'NeueM-Med';
+  color: rgba(255, 255, 255, 0.692);
 }
 
 .ButtonContainer {
   display: flex;
   justify-content: space-evenly; 
   width: 100%;
-  flex-direction: row
+  flex-direction: row;
+  gap: 20px;
 }
 
 .ButtonContainer button {
-  width: 100px;
+  width: 120px;
   height: 50px;
+  font-family: 'OverusedG-Med';
+  text-transform: uppercase;
 }
 
 .LoginButton, .SignButton {
@@ -84,9 +95,7 @@
   .OnaLogo {
     width: 15rem;
     height: 15rem;
-}
- 
-  
+  } 
 
 }
 
