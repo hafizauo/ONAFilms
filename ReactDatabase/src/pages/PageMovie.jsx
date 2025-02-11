@@ -9,15 +9,20 @@ function PageMovie() {
     // variable that store the movie data
     const [movie, setMovie] = useState(null);
 
-    // variable that store the movie cast credits
+    // variable that store the cast profile
     const [personImage, setPersonImage] = useState(null);
+
+    // variable that store the cast name
+    const [actor, setActor] = useState([]);
+
+    // variable that store the cast character name
 
     const { id } = useParams();
 
     useEffect(() => {
         getMovieById(id)
             .then((movie) => {
-                console.log(movie);
+                // console.log(movie);
                 setMovie(movie);
             })
             .catch((error) => {
@@ -29,13 +34,23 @@ function PageMovie() {
     useEffect(() => {
         getPersonImage(id)
             .then((personImage) => {
-                // console.log(personImage);
-                // console.log(personImage.cast[0].profile_path);
-                // setPersonImage(personImage.cast[0].profile_path);
                 if (personImage && personImage.cast) {
+                    // The personImage.cast goes into the cast in the api data
+                    // Then it map out every profile_path in the cast array
+                    // Finally it updates the state of the personImage with profilePaths
                     const profilePaths = personImage.cast.map((castMember) => castMember.profile_path);
-                    console.log(profilePaths);
                     setPersonImage(profilePaths); // Update the state with profile paths
+
+                    // The personImage.cast goes into the cast in the api data
+                    // Then it map out every name and character in the cast array
+                    // Finally it updates the state of the personImage with actorsData
+                    // This time it's different from the personImage because I'm storing 2 types of data instead of one
+                    // By using an empty array in the useState function, it's easier to store and access the data
+                    const actorsData = personImage.cast.map((castMember) => ({
+                        name: castMember.name,
+                        character: castMember.character
+                    }));
+                    setActor(actorsData); // Update the state with actor data
                 }
             })
             .catch((error) => {
@@ -59,14 +74,18 @@ function PageMovie() {
                 }
             </div>
             <div className="cast-container">
-                {/* {personImage &&
-                    <>
-                        <img src={`${IMG_URL}w185${personImage}`} alt={personImage.profile_path} />
-                    </>
-                } */}
-                {personImage.length > 0 &&
-                    personImage.map((path, index) => (
-                        <img key={index} src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
+                {personImage &&
+                    personImage.map((path, index) => {
+                        return path !== null ? (
+                            <img key={index} src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
+                        ) : null;
+                    })
+                }
+
+                {actor &&
+                    actor.map((actorInfo, index) => (
+                        // actorInfo is now the same as actor which means it can access all the data inside the cast array from personImage
+                        <p key={index}>{actorInfo.name} as {actorInfo.character}</p>
                     ))
                 }
             </div>
