@@ -19,10 +19,10 @@ function PageMovie() {
 
     const { id } = useParams();
 
+    // Get movie
     useEffect(() => {
         getMovieById(id)
             .then((movie) => {
-                // console.log(movie);
                 setMovie(movie);
             })
             .catch((error) => {
@@ -31,9 +31,12 @@ function PageMovie() {
             });
     }, [id]);
 
+    // Get personImage
     useEffect(() => {
         getPersonImage(id)
             .then((personImage) => {
+
+                // Copilot codes
                 if (personImage && personImage.cast) {
                     // The personImage.cast goes into the cast in the api data
                     // Then it map out every profile_path in the cast array
@@ -75,7 +78,14 @@ function PageMovie() {
             </div>
             <div className="cast-container">
                 {personImage &&
+                    // Copilot codes
                     personImage.map((path, index) => {
+                        // .map() will return the value of personImage 
+                        // Sometimes the value will be null since the personImage is set to null in the useState()
+                        // To make sure any img with a path that is equal to null doesn't get rendered
+                        // return is needed because the .map() is always expected to return a value for each item in the array
+                        // Conditional operator is needed so that when the path is not null, the image gets rendered
+                        // Whereas if the path is equal to null, .map() will just return value as null and img doesn't get rendered
                         return path !== null ? (
                             <img key={index} src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
                         ) : null;
@@ -83,6 +93,7 @@ function PageMovie() {
                 }
 
                 {actor &&
+                    // Copilot codes
                     actor.map((actorInfo, index) => (
                         // actorInfo is now the same as actor which means it can access all the data inside the cast array from personImage
                         <p key={index}>{actorInfo.name} as {actorInfo.character}</p>
