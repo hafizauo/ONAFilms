@@ -1,0 +1,21 @@
+/* Categories header */
+h2 {
+    margin: 5px;
+    margin-top: 1rem;
+}
+
+/* Popular container */
+.popular-container,
+.top-rated-container,
+.upcoming-container,
+.now-playing-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular-container .movie-card,
+.top-rated-container .movie-card,
+.upcoming-container .movie-card,
+.now-playing-container .movie-card {
+    margin: 5px;
+}
