@@ -1,26 +1,91 @@
 import "./PageHome.css";
 import logo from "../assets/logo.svg";
-// import { useEffect, useState } from "react";
-// import Movies from "../components/Movies";
-// import { getPopularMovies } from "../utilities/api"
+import { getNowPlayingMovies, getPopularMovies, getTopRatedMovies, getUpComingMovies } from "../utilities/api";
+import { useState, useEffect } from "react";
+import Movies from "../components/movies/Movies";
 
 
-function PageHome () {
+function PageHome() {
 
-   
+    // Variable for storing popular movies data
+    const [popularMovies, setPopularMovies] = useState([]);
 
+    // Variable for storing top rated movies data
+    const [topRatedMovies, setTopRatedMovies] = useState([]);
 
+    // Variable for storing upcoming movies data
+    const [upcomingMovies, setUpComingMovies] = useState([]);
+
+    // Variable for storing now playing movies data
+    const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+
+    // useEffect() for popular movies
+    useEffect(() => {
+        getPopularMovies()
+            .then((data) => {
+                // console.log(data);
+                setPopularMovies(data.results);
+            })
+            .catch((error) => {
+                alert("Error fetching popular movies", error);
+            });
+    }, []);
+
+    // useEffect() for top rated movies
+    useEffect(() => {
+        getTopRatedMovies()
+            .then((data) => {
+                // console.log(data);
+                setTopRatedMovies(data.results);
+            })
+            .catch((error) => {
+                alert("Error fetching popular movies", error);
+            });
+    }, []);
+
+    // useEffect() for upcoming movies
+    useEffect(() => {
+        getUpComingMovies()
+            .then((data) => {
+                // console.log(data);
+                setUpComingMovies(data.results);
+            })
+            .catch((error) => {
+                alert("Error fetching upcoming movies", error);
+            });
+    }, []);
+
+    // useEffect() for now playing movies
+    useEffect(() => {
+        getNowPlayingMovies()
+            .then((data) => {
+                // console.log(data);
+                setNowPlayingMovies(data.results);
+            })
+            .catch((error) => {
+                alert("Error fetching now playing movies", error);
+            });
+    }, []);
 
     return (
+        <div>
+            <h1>Home Page</h1>
 
-        <section>
-            <div>PageMovie</div>
-            <img src={logo} alt="logo" className="logo"></img> 
-            <h1>Home</h1>
-        </section>
-        
+            {/* Displaying popular movies */}
+            <Movies title="POPULAR MOVIES" movies={popularMovies} classname="popular-container" />
+
+            {/* Displaying top rated movies */}
+            <Movies title="TOP RATED MOVIES" movies={topRatedMovies} classname="top-rated-container" />
+
+            {/* Displaying upcoming movies */}
+            <Movies title="UPCOMING MOVIES" movies={upcomingMovies} classname="upcoming-container" />
+
+            {/* Displaying now playing movies */}
+            <Movies title="NOW PLAYING MOVIES" movies={nowPlayingMovies} classname="now-playing-container" />
+
+        </div>
     )
-    
+
 }
 
 export default PageHome;
