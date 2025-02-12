@@ -1,0 +1,22 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+img.logo {
+    width: 150px;
+    height: 150px;
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
