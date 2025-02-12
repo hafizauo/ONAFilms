@@ -5,8 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .MainLC2 {
@@ -125,6 +124,69 @@
   width: 3rem;
   height: 3rem;
   margin: 1rem;
+}
+
+/* ⇣⇣ TABLET SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+  .MainLC {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    gap: 3rem;
+  }
+
+  .FormContainer {
+    background-color: #755971;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .MainLC2 {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+
+}
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 75em) {
+  .MainLC {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    gap: 8rem;
+  }
+
+  .FormContainer {
+    background-color: #755971;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    height: 100vh;
+    width: 35vw;
+  }
+
+  .MainLC2 {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .OnaLogo2 {
+    width: 18rem;
+    height: 18rem;
+  }
+  
+
 }
 
 
