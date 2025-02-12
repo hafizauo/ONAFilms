@@ -143,7 +143,10 @@
     width: 25rem;
     height: 25rem;
   }
- 
+  
+  .LoginButton:hover {
+    background-color: rgba(90, 255, 203, 0.507);
+  }
 
 }
 
