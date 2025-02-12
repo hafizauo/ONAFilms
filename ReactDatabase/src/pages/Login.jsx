@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import '../pages/Login.css';
+import "../index.css";
+
 import logo from "../assets/logo.svg";
+// import Google from '../assets/Google.svg';
+// import Facebook from '../assets/Facebook.svg';
+// import Twitter from '../assets/TwitterX.svg'
+
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -17,12 +23,15 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <main className="login-container">
-      <img src={logo} alt="logo" className="logo" />
-      <h1>Welcome back!</h1>
-      <p className="account">Log into your account below</p>
+    <main className="MainLC">
+      
+        <section className="MainLC2">
+          <img src={logo} alt="OnaLogo" className="OnaLogo2" />
+          <h1>Welcome back!</h1>
+          <p className="account">Log Into Your Account Below</p>
+        </section>
 
-        <section className="main-container">
+        <section className="FormContainer">
 
           <form onSubmit={handleLogin}>
             <input
@@ -39,10 +48,23 @@ const LoginPage = ({ onLogin }) => {
               onChange={(e) => setPassword(e.target.value)}
               className="input-field"/>
 
+            <p>Forgot Your Password?</p>
+
             <button type="submit" className="login-button">Login</button>
+
           </form>
 
-          <p className='create'>Create An Account</p>
+          <article className='EndContainer'>
+
+              <p>Sign In With:</p>
+                <div className="LoginSocials">
+                  {/* <img src={Google} alt="OnaLogo" className="SvgIcons" />
+                  <img src={Facebook} alt="OnaLogo" className="SvgIcons" />
+                  <img src={Twitter} alt="OnaLogo" className="SvgIcons" /> */}
+                </div>
+              <p className='create'>Create An Account</p>
+
+          </article>
 
         </section>
 

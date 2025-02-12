@@ -1,6 +1,37 @@
 
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.MainLC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+}
 
+.MainLC2 {
+  padding: 1.2rem;
+}
 
+.FormContainer form, .EndContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormContainer {
+  background-color: #755971;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.OnaLogo2 {
+  width: 13rem;
+  height: 13rem;
+}
 
 
 
