@@ -26,40 +26,68 @@
 // vote_average: 7.776
 // vote_count: 1585
 
-import "./MovieCards.css"
+import "./MovieCards.css";
 import { IMG_URL } from "../../globals/global";
 import { formatRating, formatReleaseDate } from "../../utilities/toolbelts";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function MovieCard({ movie }) {
-
+    const [isFavorite, setIsFavorite] = useState(false);
     const navigate = useNavigate();
+
+    // Initialize the heart state based on local storage
+    useEffect(() => {
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        const isAlreadyFavorite = favorites.some(fav => fav.id === movie.id);
+        setIsFavorite(isAlreadyFavorite); // Set initial favorite state
+    }, [movie.id]);
+
+    // Prevent navigation when heart button is clicked
+    const handleHeartClick = (e) => {
+        e.stopPropagation();  // Prevent the navigation when clicking the heart button
+
+        // Get the current favorites from local storage
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        if (isFavorite) {
+            // Remove movie from favorites if it's already in there
+            favorites = favorites.filter(fav => fav.id !== movie.id);
+        } else {
+            // Add the movie to favorites if it's not already there
+            favorites.push(movie);
+        }
+
+        // Save the updated favorites list back to local storage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        // Toggle the heart state
+        setIsFavorite(!isFavorite);
+    };
+
     return (
-        <div className="movie-card" >
+        <div className="movie-card">
             <div className="movie-poster-container">
                 <img
                     src={`${IMG_URL}w342${movie.poster_path}`}
                     alt={movie.title}
                 />
-                <div className="backdrop" onClick={() => navigate(`/movie/${movie.id}`)} >
-                    <div className="title-and-release" >
-                        {/* <h3>{movie.title}</h3> */}
+                <div className="backdrop" onClick={() => navigate(`/movie/${movie.id}`)}>
+                    <div className="title-and-release">
+                        <h3>{movie.title}</h3>
                         <p>{movie.overview}</p>
                         <p>{formatReleaseDate(movie.release_date)}</p>
                     </div>
                     <div className="rating-and-favorite">
                         <p id="rating">{formatRating(movie.vote_average)}</p>
-                        {/* 
-                            e.stopPropagation() this stops the event bubbling from happening.
-                            The parent div will be clickable but the button won't be affect by the onClick that applies to the parent
-                        */}
-                        <button onClick={(e) => e.stopPropagation()}>❤️</button>
+                        <button onClick={handleHeartClick}>
+                            {isFavorite ? "❤️" : "🤍"}
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default MovieCard;
-
