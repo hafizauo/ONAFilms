@@ -35,21 +35,25 @@ function MovieCard({ movie }) {
 
     const navigate = useNavigate();
     return (
-        <div className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
+        <div className="movie-card" >
             <div className="movie-poster-container">
                 <img
                     src={`${IMG_URL}w342${movie.poster_path}`}
                     alt={movie.title}
                 />
-                <div className="backdrop">
-                    <div className="title-and-release">
+                <div className="backdrop" onClick={() => navigate(`/movie/${movie.id}`)} >
+                    <div className="title-and-release" >
                         {/* <h3>{movie.title}</h3> */}
                         <p>{movie.overview}</p>
                         <p>{formatReleaseDate(movie.release_date)}</p>
                     </div>
                     <div className="rating-and-favorite">
                         <p id="rating">{formatRating(movie.vote_average)}</p>
-                        <button>❤️</button>
+                        {/* 
+                            e.stopPropagation() this stops the event bubbling from happening.
+                            The parent div will be clickable but the button won't be affect by the onClick that applies to the parent
+                        */}
+                        <button onClick={(e) => e.stopPropagation()}>❤️</button>
                     </div>
                 </div>
             </div>
