@@ -36,18 +36,21 @@ function MovieCard({ movie }) {
     const navigate = useNavigate();
     return (
         <div className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
-            <img
-                src={`${IMG_URL}w342${movie.poster_path}`}
-                alt={movie.title}
-            />
-            <div className="backdrop">
-                <div className="title-and-release">
-                    <h3>{movie.title}</h3>
-                    <p>{formatReleaseDate(movie.release_date)}</p>
-                </div>
-                <div className="rating-and-favorite">
-                    <p>{formatRating(movie.vote_average)}</p>
-                    <button>❤️</button>
+            <div className="movie-poster-container">
+                <img
+                    src={`${IMG_URL}w342${movie.poster_path}`}
+                    alt={movie.title}
+                />
+                <div className="backdrop">
+                    <div className="title-and-release">
+                        {/* <h3>{movie.title}</h3> */}
+                        <p>{movie.overview}</p>
+                        <p>{formatReleaseDate(movie.release_date)}</p>
+                    </div>
+                    <div className="rating-and-favorite">
+                        <p id="rating">{formatRating(movie.vote_average)}</p>
+                        <button>❤️</button>
+                    </div>
                 </div>
             </div>
         </div>
