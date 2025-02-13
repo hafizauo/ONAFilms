@@ -10,7 +10,7 @@ function Footer() {
                           <section className="footer-content">
                             <li className="f-list-heading">Navigation</li>
                             <div className="list-line"></div>
-                            <li className="sub-list"><Link to="/">Homepage</Link></li>
+                            <li className="sub-list"><Link to="/home">Homepage</Link></li>
                             <li className="sub-list"><Link to="/favourites">Favourites</Link></li>
                             <li className="sub-list"><Link to="/about">About Us</Link></li>
                             <li className="sub-list"><Link to="/login">Login</Link></li>

@@ -21,30 +21,32 @@ function PageFavourites() {
     };
 
     return (
-        <div>
-            <h1>Favorites Page</h1>
-
-            {/* Clear All Favorites button */}
-            <button onClick={clearFavorites} className="clear-favorites-btn">
-                Clear All Favorites
-            </button>
-
+        <main className="FavoriteContainer">
             <div className="favorites-container">
                 {favorites.length === 0 ? (
-                    <p>No favorites yet!</p>
+                    <section>
+                        <p>You Haven&apos;t Favorited Any Movies Yet ￣へ￣</p>
+                        <p>If you would like to favorite a movie, please click the heart icon on the main page!</p>
+                    </section>
                 ) : (
-                    favorites.map((movie) => (
-                        <div key={movie.id} className="favorite-movie">
-                            <img
-                                src={`${IMG_URL}w342${movie.poster_path}`}
-                                alt={movie.title}
-                                className="favorite-movie-image"
-                            />
-                        </div>
-                    ))
+                    <>  
+                    <section>
+                        <button onClick={clearFavorites} className="clear-favorites-btn">
+                            Clear All Favorites
+                        </button>
+                        {favorites.map((movie) => (
+                            <div key={movie.id} className="favorite-movie">
+                                <img
+                                    src={`${IMG_URL}w342${movie.poster_path}`}
+                                    alt={movie.title}
+                                    className="favorite-movie-image"/>
+                            </div>
+                        ))}
+                    </section>
+                    </>
                 )}
             </div>
-        </div>
+        </main>
     );
 }
 

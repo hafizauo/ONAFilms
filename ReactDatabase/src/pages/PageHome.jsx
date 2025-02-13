@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import { getNowPlayingMovies, getPopularMovies, getTopRatedMovies, getUpComingMovies } from "../utilities/api";
 import { useState, useEffect } from "react";
 import Movies from "../components/movies/Movies";
+import RandomMovieBackdrop from "../components/movies/backdrop";
 
 
 function PageHome() {
@@ -69,6 +70,7 @@ function PageHome() {
 
     return (
         <div>
+            <RandomMovieBackdrop />
             <h1>Home Page</h1>
 
             {/* Displaying popular movies */}

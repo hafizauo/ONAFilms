@@ -14,7 +14,7 @@ function Header() {
         // <!-- [1] Header & Navigation (GLOBAL)  -->
         <header>
             <nav>
-                <Link to="/">
+                <Link to="/home">
                     <img src={logo} className="ona-film-logo" alt="uae-flag-logo" />
                 </Link>
 
@@ -42,7 +42,7 @@ function Header() {
             <div className={`overlay ${isMenuOpen ? 'active' : ''}`} id="menuOverlay">
                 <div className="overlay-content">
                     <ul>
-                        <li className="menu-item"><Link to="/">Home</Link></li>
+                        <li className="menu-item"><Link to="/home">Home</Link></li>
                         <li className="menu-item"><Link to="/favourites">Favourites</Link></li>
                         <li className="menu-item"><Link to="/about">About</Link></li>
                         {/* <li><Link to="/movie/1">Movie</Link></li> */}

@@ -1,0 +1,12 @@
+.backdrop-container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    /* height: 100vh;  Full viewport height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.backdrop-container img {
+    width: 100%;
+    object-fit:fill;
+    height: auto;
+}
