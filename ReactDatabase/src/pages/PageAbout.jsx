@@ -15,7 +15,7 @@ function PageAbout() {
         <article className="ArticleAbout1">
             <h1 className="H1-Intro">Introduction</h1>
             <p>Welcome to O.N.A² Films, your gateway to an expansive world of storytelling. Our platform is dedicated to bringing you the most thrilling, dramatic, and unforgettable cinematic experiences.</p>
-            <p> Dive into our curated database of films, explore the stories behind the scenes, and find your next favorite movie. Whether you're a fan of crime dramas, heartwarming romances, or pulse-pounding thrillers, O.N.A² Films has something to captivate every viewer.</p>
+            <p> Dive into our curated database of films, explore the stories behind the scenes, and find your next favorite movie. Whether you&apos;re a fan of crime dramas, heartwarming romances, or pulse-pounding thrillers, O.N.A² Films has something to captivate every viewer.</p>
         </article>
 
         <br/><br/><br/><br/>

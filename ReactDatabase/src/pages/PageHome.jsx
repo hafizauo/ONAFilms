@@ -1,9 +1,9 @@
 import "./PageHome.css";
-import logo from "../assets/logo.svg";
+// import logo from "../assets/logo.svg";
 import { getNowPlayingMovies, getPopularMovies, getTopRatedMovies, getUpComingMovies } from "../utilities/api";
 import { useState, useEffect } from "react";
 import Movies from "../components/movies/Movies";
-import RandomMovieBackdrop from "../components/movies/backdrop";
+import RandomMovieBackdrop from "../components/movies/Backdrop";
 
 
 function PageHome() {

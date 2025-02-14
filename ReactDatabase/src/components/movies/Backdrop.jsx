@@ -2,11 +2,12 @@ import "./Backdrop.css"
 import { IMG_URL } from "../../globals/global";
 import { useState, useEffect } from "react";
 import { getPopularMovies } from "../../utilities/api";
+
 function Backdrop({ movie }) {
     return (
         <div className="backdrop-container" >
-            <img
-                src={`${IMG_URL}w780${movie.backdrop_path}`}
+            <img 
+                src={`${IMG_URL}${movie.backdrop_path ? `w1280${movie.backdrop_path}` : `original${movie.backdrop_path}`}`} 
                 alt={movie.title}
             />
         </div>
@@ -23,7 +24,7 @@ function RandomMovieBackdrop() {
                 // console.log(data.results);
                 setMovies(data.results);
                 // data.results gives an array of movie datas
-                // Math.random() * data.results.length =>
+                // Math.random() * data.results.lengvth =>
                 // This multiplies the random number (between 0 and 1) by the total number of movies, resulting in a random number between 0 and data.results.length - 1.
                 setRandomMovie(data.results[Math.floor(Math.random() * data.results.length)]);
             })

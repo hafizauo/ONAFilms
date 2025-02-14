@@ -1,0 +1,130 @@
+/* yao ming tablet & desktop */
+@media (min-width: 48em) {
+    /* General Styling */
+    .single-movie {
+      padding: 20px;
+      color: white;
+    }
+    
+    .Movie Details {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .single-movie-container {
+      display: flex;
+      gap: 100px;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .single-movie-container img {
+      max-width: 300px;
+      border-radius: 8px;
+    }
+    
+    .single-movie-container div {
+      flex: 1;
+    }
+    
+    .single-movie-container h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    
+    .single-movie-container p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .single-movie-container button {
+      background-color: #ff4757;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .cast-container {
+      margin-top: 40px;
+    }
+    
+    .cast-container img {
+      width: 120px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+  }
+
+@media screen and (min-width: 20em) and (max-width: 47.99em) {
+    .single-movie {
+        padding: 10px;
+        color: white;
+    }
+
+    .Movie Details {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .single-movie-container {
+        display: block;
+        gap: 10px;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .single-movie-container img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .single-movie-container div {
+        flex: none;
+    }
+
+    .single-movie-container h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .single-movie-container p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .single-movie-container button {
+        background-color: #ff4757;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .cast-container {
+        margin-top: 20px;
+    }
+
+    .cast-container img {
+        width: 80px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 5px;
+    }
+}

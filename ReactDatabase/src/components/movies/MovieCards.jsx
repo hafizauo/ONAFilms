@@ -65,6 +65,11 @@ function MovieCard({ movie }) {
         setIsFavorite(!isFavorite);
     };
 
+    const truncateOverview = (overview, maxLength) => {
+        if (overview.length <= maxLength) return overview;
+        return overview.slice(0, maxLength) + '...';
+    };
+
     return (
         <div className="movie-card">
             <div className="movie-poster-container">
@@ -75,13 +80,13 @@ function MovieCard({ movie }) {
                 <div className="backdrop" onClick={() => navigate(`/movie/${movie.id}`)}>
                     <div className="title-and-release">
                         <h3>{movie.title}</h3>
-                        <p>{movie.overview}</p>
-                        <p>{formatReleaseDate(movie.release_date)}</p>
+                        <p>{truncateOverview(movie.overview, 100)}</p>
+                        <p><span className="MovieHighlight">{formatReleaseDate(movie.release_date)}</span></p>
                     </div>
                     <div className="rating-and-favorite">
-                        <p id="rating">{formatRating(movie.vote_average)}</p>
-                        <button onClick={handleHeartClick}>
-                            {isFavorite ? "❤️" : "🤍"}
+                        <p id="rating">⭐&nbsp;{formatRating(movie.vote_average)}</p>
+                        <button className="HeartFunction" onClick={handleHeartClick}>
+                            <img src={isFavorite ? "https://img.icons8.com/ios-filled/50/FF0000/like--v1.png" : "https://img.icons8.com/ios/50/FF0000/like--v1.png"} />
                         </button>
                     </div>
                 </div>
