@@ -4,6 +4,7 @@ import useHamburgerMenu from "../globals/hamburgermenu";
 
 import "./Header.css"
 import logo from "../assets/logo.svg";
+import user from "../assets/User.svg";
 
 
 
@@ -22,6 +23,7 @@ function Header() {
                     {/* <li><Link to="/">Home</Link></li> */}
                     <li><Link to="/favourites">Favourites</Link></li>
                     <li><Link to="/about">About</Link></li>
+                    <Link to="/login"><img src={user} className="UserSvg" alt="user-login" /></Link>
                     {/* <li><Link to="/movie/1">Movie</Link></li> */}
                 </ul>
 
@@ -42,6 +44,7 @@ function Header() {
             <div className={`overlay ${isMenuOpen ? 'active' : ''}`} id="menuOverlay">
                 <div className="overlay-content">
                     <ul>
+                        <li className="menu-item"><Link to="/login">Login</Link></li>
                         <li className="menu-item"><Link to="/home">Home</Link></li>
                         <li className="menu-item"><Link to="/favourites">Favourites</Link></li>
                         <li className="menu-item"><Link to="/about">About</Link></li>

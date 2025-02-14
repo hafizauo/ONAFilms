@@ -18,7 +18,7 @@ nav {
     letter-spacing: 0.5px;
 }
 
-nav li {
+nav li, .UserSvg {
     display: none;
 }
 
@@ -161,6 +161,7 @@ nav ul a {
         list-style: none;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 20px;
     }
 
@@ -181,7 +182,7 @@ nav ul a {
         color: rgba(35, 35, 35, 0.322);
     }
 
-    nav li, .link {
+    nav li, .link, .UserSvg {
         display: block;
     }
 
@@ -196,5 +197,15 @@ nav ul a {
 
     .no-scroll {
         overflow: hidden;
+    }
+
+    .UserSvg {
+        width: 2rem;
+        height: 2rem;
+        transition: 0.3s;
+    }
+
+    .UserSvg:hover {
+        opacity: 0.6;
     }
 }
