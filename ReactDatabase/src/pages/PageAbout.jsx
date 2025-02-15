@@ -1,5 +1,6 @@
 import "./PageAbout.css";
 import logo from "../assets/logo.svg";
+import tmdbLogo from "../assets/TMDB.svg";
 
 function PageAbout() {
   return (
@@ -27,6 +28,15 @@ function PageAbout() {
             <p><span className="HighlightAbout">Exclusive Content:</span>&nbsp;Access interviews, trailers, and behind-the-scenes footage to delve deeper into the making of each film.</p>
             <p><span className="HighlightAbout">Connect & Share:</span>&nbsp;Engage with other film fans, share your favorite picks, and stay updated on upcoming releases and industry news.</p>
         </article>
+
+        <br/><br/><br/><br/>
+
+        <div className="tmdb-attribution">
+            <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+            <img src={tmdbLogo} alt="TMDb Logo" className="tmdb-logo"/>
+        </div>
+
+        
       </section>
 
       <br/><br/><br/><br/>

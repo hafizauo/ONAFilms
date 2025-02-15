@@ -32,7 +32,7 @@
     padding: 20px;
 }
 
-.ArticleAbout1 p, .ArticleAbout2 p {
+.ArticleAbout1 p, .ArticleAbout2 p{
     color: white;
     text-align: left;
     font-family: 'NeueM-Thin';
@@ -40,7 +40,7 @@
     font-size: 1.4rem;
 }
 
-.H1-Intro, .H2-Intro {
+.H1-Intro, .H2-Intro{
     text-align: center;
     font-family: 'OverusedG-Bold';
     color: white;
@@ -49,6 +49,12 @@
 
 .HighlightAbout {
     font-family: 'NeueM-Med';
+}
+
+.tmdb-attribution {
+    color: white;
+    font-family: 'OverusedG-Med';
+    text-align: center;
 }
 
 /* ⇣⇣ TABLET SETTINGS ⇣⇣ */

@@ -1,6 +1,6 @@
 /* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
 
-.backdrop h3, p  {
+.backdrop h3, .backdrop p  {
     display: none;
 }
 
@@ -52,7 +52,7 @@
     }
 
     
-.backdrop h3, p  {
+.backdrop h3, .backdrop p  {
     display: block;
 }
     

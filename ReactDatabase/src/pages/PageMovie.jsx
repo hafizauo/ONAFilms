@@ -1,41 +1,38 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getMovieById, getPersonImage } from "../utilities/api";
+import { getMovieById, getPersonImage, getMovieTrailer } from "../utilities/api";
 import { IMG_URL } from "../globals/global";
 import { formatReleaseDate } from "../utilities/toolbelts";
 import "./PageMovie.css";
-import { getMovieTrailer } from "../utilities/api";
+
+// Import Splide
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 function PageMovie() {
   const [movie, setMovie] = useState(null);
-  const [personImage, setPersonImage] = useState(null);
+  const [personImage, setPersonImage] = useState([]);
   const [actor, setActor] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
-  const [trailer, setTrailter] = useState(null);
-  const [trailerKey, setTrailterKey] = useState([]);
+  const [trailerKey, setTrailterKey] = useState(null);
 
-
-
-  // trailer ahh
-
-    useEffect(() => {
-      getMovieTrailer(id)
-          .then((trailer) => {
-              // console.log(trailer.results[0]);
-              trailer.results.map((array) => {
-                  if (array.type == "Trailer") {
-                      console.log("This is the correct type")
-                      console.log(array.key);
-                      setTrailterKey(array.key);
-                  }
-              })
-          })
-          .catch((error) => {
-              alert("Error fetching movie trailer by ID");
-              console.error("Error fetching movie trailer by ID:", error);
-          });
+  // ✅ Restore trailer fetching logic
+  useEffect(() => {
+    getMovieTrailer(id)
+      .then((trailer) => {
+        trailer.results.forEach((video) => {
+          if (video.type === "Trailer") {
+            console.log("Trailer found:", video.key);
+            setTrailterKey(video.key);
+          }
+        });
+      })
+      .catch((error) => {
+        alert("Error fetching movie trailer by ID");
+        console.error("Error fetching movie trailer by ID:", error);
+      });
   }, [id]);
 
   // Fetch movie details
@@ -60,11 +57,13 @@ function PageMovie() {
     getPersonImage(id)
       .then((personImage) => {
         if (personImage && personImage.cast) {
-          setPersonImage(personImage.cast.map(cast => cast.profile_path));
-          setActor(personImage.cast.map(cast => ({
-            name: cast.name,
-            character: cast.character
-          })));
+          setPersonImage(personImage.cast.map((cast) => cast.profile_path));
+          setActor(
+            personImage.cast.map((cast) => ({
+              name: cast.name,
+              character: cast.character,
+            }))
+          );
         }
       })
       .catch((error) => {
@@ -86,8 +85,6 @@ function PageMovie() {
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
-
-    // navigate("/favourites");
   };
 
   return (
@@ -110,38 +107,60 @@ function PageMovie() {
         )}
       </div>
 
+      {/* ✅ Restored Trailer Section */}
       <div className="trailer-container">
-      <h1 className="movie-details"> Movie Trailer</h1>
-        {trailerKey && (
+        <h1 className="movie-details"> Movie Trailer</h1>
+        {trailerKey ? (
           <iframe
             width="560"
             height="315"
             src={`https://www.youtube.com/embed/${trailerKey}`}
             title="YouTube video player"
-            frameBorder="0" allowFullScreen
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
+        ) : (
+          <p>No trailer available.</p>
         )}
       </div>
-      
+
       {/* Cast Section */}
       <h2 className="cast-heading">Cast</h2>
 
-      
-      <div className="cast-container">
-        
-        
+      {/* ✅ Splide Cast Slider */}
+      <Splide
+        options={{
+          type: "loop",
+          perPage: 6, // Default (Desktop)
+          perMove: 1,
+          gap: "1rem",
+          padding: "1rem",
+          pagination: false,
+          autoplay: true,
+          breakpoints: {
+            800: { perPage: 4, gap: "1rem" }, // Tablet
+            600: { perPage: 3, gap: "1rem" }, // Small Tablet
+            400: { perPage: 2, gap: "1rem" }, // Mobile
+            320: { perPage: 1, gap: "0.5rem" }, // Extra Small Screens
+          },
+        }}
+      >
         {personImage &&
-          personImage.map((path, index) => (
+          personImage.map((path, index) =>
             path !== null ? (
-              <div key={index} className="cast-card">
-                <img src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
-                <p>{actor[index]?.name || "Unknown"}<br/> 
-                <span className="character-name">as {actor[index]?.character || "N/A"}</span></p>
-              </div>
+              <SplideSlide key={index}>
+                <div className="cast-card">
+                  <img src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
+                  <p>
+                    {actor[index]?.name || "Unknown"}
+                    <br />
+                    <span className="character-name">as {actor[index]?.character || "N/A"}</span>
+                  </p>
+                </div>
+              </SplideSlide>
             ) : null
-          ))
-        }
-      </div>
+          )}
+      </Splide>
     </div>
   );
 }
