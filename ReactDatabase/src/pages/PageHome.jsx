@@ -14,6 +14,7 @@ function PageHome() {
     const [topRatedMovies, setTopRatedMovies] = useState([]);
     const [upcomingMovies, setUpComingMovies] = useState([]);
     const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
+    
 
     useEffect(() => {
         getPopularMovies()
@@ -103,46 +104,54 @@ function PageHome() {
         <div className="homepage">
             <RandomMovieBackdrop />
             <SecondNav />
-
-            {/* Popular Movies Slider */}
-            <h2 className="slider-title">POPULAR MOVIES</h2>
-            <Splide options={splideOptions}>
-                {popularMovies.map((movie) => (
-                    <SplideSlide key={movie.id}>
-                        <MovieCard movie={movie} />
-                    </SplideSlide>
-                ))}
-            </Splide>
-
-            {/* Top Rated Movies Slider */}
-            <h2 className="slider-title">TOP RATED MOVIES</h2>
-            <Splide options={splideOptions}>
-                {topRatedMovies.map((movie) => (
-                    <SplideSlide key={movie.id}>
-                        <MovieCard movie={movie} />
-                    </SplideSlide>
-                ))}
-            </Splide>
-
-            {/* Upcoming Movies Slider */}
-            <h2 className="slider-title">UPCOMING MOVIES</h2>
-            <Splide options={splideOptions}>
-                {upcomingMovies.map((movie) => (
-                    <SplideSlide key={movie.id}>
-                        <MovieCard movie={movie} />
-                    </SplideSlide>
-                ))}
-            </Splide>
-
-            {/* Now Playing Movies Slider */}
-            <h2 className="slider-title">NOW PLAYING MOVIES</h2>
-            <Splide options={splideOptions}>
-                {nowPlayingMovies.map((movie) => (
-                    <SplideSlide key={movie.id}>
-                        <MovieCard movie={movie} />
-                    </SplideSlide>
-                ))}
-            </Splide>
+    
+            {/* Popular Movies Section */}
+            <div id="popular">
+                <h2 className="slider-title">POPULAR MOVIES</h2>
+                <Splide options={splideOptions}>
+                    {popularMovies.map((movie) => (
+                        <SplideSlide key={movie.id}>
+                            <MovieCard movie={movie} />
+                        </SplideSlide>
+                    ))}
+                </Splide>
+            </div>
+    
+            {/* Top Rated Movies Section */}
+            <div id="top-rated">
+                <h2 className="slider-title">TOP RATED MOVIES</h2>
+                <Splide options={splideOptions}>
+                    {topRatedMovies.map((movie) => (
+                        <SplideSlide key={movie.id}>
+                            <MovieCard movie={movie} />
+                        </SplideSlide>
+                    ))}
+                </Splide>
+            </div>
+    
+            {/* Upcoming Movies Section */}
+            <div id="upcoming">
+                <h2 className="slider-title">UPCOMING MOVIES</h2>
+                <Splide options={splideOptions}>
+                    {upcomingMovies.map((movie) => (
+                        <SplideSlide key={movie.id}>
+                            <MovieCard movie={movie} />
+                        </SplideSlide>
+                    ))}
+                </Splide>
+            </div>
+    
+            {/* Now Playing Movies Section */}
+            <div id="now-playing">
+                <h2 className="slider-title">NOW PLAYING MOVIES</h2>
+                <Splide options={splideOptions}>
+                    {nowPlayingMovies.map((movie) => (
+                        <SplideSlide key={movie.id}>
+                            <MovieCard movie={movie} />
+                        </SplideSlide>
+                    ))}
+                </Splide>
+            </div>
         </div>
     );
 }

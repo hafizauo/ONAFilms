@@ -11,6 +11,7 @@ import user from "../assets/User.svg";
 function Header() {
     const { isMenuOpen, toggleMenu } = useHamburgerMenu() || {};
 
+
     return (
         // <!-- [1] Header & Navigation (GLOBAL)  -->
         <header>

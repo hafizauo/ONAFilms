@@ -71,16 +71,13 @@ function MovieCard({ movie }) {
     };
 
     return (
-        <div className="movie-card">
+        <div className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
             <div className="movie-poster-container">
-                <img
-                    src={`${IMG_URL}w342${movie.poster_path}`}
-                    alt={movie.title}
-                />
+                <img src={`${IMG_URL}w342${movie.poster_path}`} alt={movie.title}/>
                 <div className="backdrop" onClick={() => navigate(`/movie/${movie.id}`)}>
                     <div className="title-and-release">
                         <h3>{movie.title}</h3>
-                        <p>{truncateOverview(movie.overview, 100)}</p>
+                        <p>{truncateOverview(movie.overview, 50)}&nbsp;<span className="MoreInfo">(More Info)</span></p>
                         <p><span className="MovieHighlight">{formatReleaseDate(movie.release_date)}</span></p>
                     </div>
                     <div className="rating-and-favorite">
