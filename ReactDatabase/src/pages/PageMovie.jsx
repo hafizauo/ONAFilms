@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getMovieById, getPersonImage, getMovieTrailer } from "../utilities/api";
 import { IMG_URL } from "../globals/global";
-import { formatReleaseDate } from "../utilities/toolbelts";
+import { formatRating, formatReleaseDate } from "../utilities/toolbelts";
 import "./PageMovie.css";
 
 // Import Splide
@@ -97,6 +97,7 @@ function PageMovie() {
             <div>
               <h2>{movie.title}</h2>
               <p>{formatReleaseDate(movie.release_date)}</p>
+              <p id="rating">⭐&nbsp;{formatRating(movie.vote_average)}</p>
               <p>{movie.runtime} min</p>
               <p>{movie.overview}</p>
               <button onClick={handleFavoriteClick}>
