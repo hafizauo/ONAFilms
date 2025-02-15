@@ -1,4 +1,31 @@
-/* .logo {
-    width: 250px;
-    height: 250px;
+/* Base styles */
+/* .homepage {
+    padding: 0 1rem;
+    background-color: #2a1a3a;
 } */
+
+.slider-title {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Mobile - Default */
+.splide {
+    padding: 1rem; /* Ensures spacing around the slider */
+}
+
+/* Tablet (min-width: 55em ≈ 880px) */
+@media (min-width: 55em) {
+    .splide {
+        padding: 2rem;
+    }
+}
+
+/* Desktop (min-width: 75em ≈ 1200px) */
+@media (min-width: 75em) {
+    .splide {
+        padding: 3rem;
+    }
+}

@@ -5,7 +5,6 @@ import { IMG_URL } from "../globals/global";
 import { formatReleaseDate } from "../utilities/toolbelts";
 import "./PageMovie.css";
 
-
 function PageMovie() {
   const [movie, setMovie] = useState(null);
   const [personImage, setPersonImage] = useState(null);
@@ -20,7 +19,7 @@ function PageMovie() {
       .then((movie) => {
         setMovie(movie);
 
-        // Check if movie is in favorites after movie data is fetched
+        // Check if movie is in favorites
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
         const isAlreadyFavorite = favorites.some((fav) => fav.id === movie.id);
         setIsFavorite(isAlreadyFavorite);
@@ -36,16 +35,11 @@ function PageMovie() {
     getPersonImage(id)
       .then((personImage) => {
         if (personImage && personImage.cast) {
-          const profilePaths = personImage.cast.map(
-            (castMember) => castMember.profile_path
-          );
-          setPersonImage(profilePaths);
-
-          const actorsData = personImage.cast.map((castMember) => ({
-            name: castMember.name,
-            character: castMember.character,
-          }));
-          setActor(actorsData);
+          setPersonImage(personImage.cast.map(cast => cast.profile_path));
+          setActor(personImage.cast.map(cast => ({
+            name: cast.name,
+            character: cast.character
+          })));
         }
       })
       .catch((error) => {
@@ -61,22 +55,19 @@ function PageMovie() {
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
     if (!isFavorite) {
-      // Add movie to favorites
       favorites.push(movie);
     } else {
-      // Remove movie from favorites
       favorites = favorites.filter((favMovie) => favMovie.id !== movie.id);
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
 
-    // Navigate to favorites page
-    navigate("/favourites");
+    // navigate("/favourites");
   };
 
   return (
     <div className="single-movie">
-      <h1 className="Movie Details"> Movie Details</h1>
+      <h1 className="movie-details"> Movie Details</h1>
       <div className="single-movie-container">
         {movie && (
           <>
@@ -84,7 +75,7 @@ function PageMovie() {
             <div>
               <h2>{movie.title}</h2>
               <p>{formatReleaseDate(movie.release_date)}</p>
-              <p>{movie.runtime}</p>
+              <p>{movie.runtime} min</p>
               <p>{movie.overview}</p>
               <button onClick={handleFavoriteClick}>
                 {isFavorite ? "❤️" : "🤍"}
@@ -93,24 +84,21 @@ function PageMovie() {
           </>
         )}
       </div>
+      
+      {/* Cast Section */}
+      <h2 className="cast-heading">Cast</h2>
       <div className="cast-container">
         {personImage &&
-          personImage.map((path, index) => {
-            return path !== null ? (
-              <img
-                key={index}
-                src={`${IMG_URL}w185${path}`}
-                alt={`Cast member ${index + 1}`}
-              />
-            ) : null;
-          })}
-
-        {actor &&
-          actor.map((actorInfo, index) => (
-            <p key={index}>
-              {actorInfo.name} as {actorInfo.character}
-            </p>
-          ))}
+          personImage.map((path, index) => (
+            path !== null ? (
+              <div key={index} className="cast-card">
+                <img src={`${IMG_URL}w185${path}`} alt={`Cast member ${index + 1}`} />
+                <p>{actor[index]?.name || "Unknown"}<br/> 
+                <span className="character-name">as {actor[index]?.character || "N/A"}</span></p>
+              </div>
+            ) : null
+          ))
+        }
       </div>
     </div>
   );

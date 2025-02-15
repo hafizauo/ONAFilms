@@ -8,7 +8,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
-    background-color: none;
+    background-color: rgb(255, 255, 255);
     
     font-size: 20px;
     text-decoration: none;
@@ -64,7 +64,7 @@ nav ul a {
 .line {
     fill:none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke:#ffffff;
+    stroke:#000000;
     stroke-width:5.5;
     stroke-linecap:round;
 }

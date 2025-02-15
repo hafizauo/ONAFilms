@@ -1,12 +1,35 @@
+
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
 .backdrop-container {
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    /* height: 100vh;  Full viewport height */
-    overflow: hidden; /* Hide overflow */
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    height: 40vh; /* Adjust as needed */
+    width: 100%;
+    overflow: hidden; /* Prevents unwanted overflow */
 }
 
 .backdrop-container img {
-    width: 100%;
-    object-fit: cover;
-    height: 60vh;
+    width: 100%; /* Ensures proper scaling */
+    height: 100%; /* Fills the container */
+    object-fit: cover; /* Prevents stretching */
+}
+
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+    .backdrop-container {
+        display: flex;
+        justify-content: center; /* Centers image horizontally */
+        align-items: center; /* Centers image vertically */
+        height: 60vh; /* Adjust as needed */
+        width: 100%;
+        overflow: hidden; /* Prevents unwanted overflow */
+    }
+    
+    .backdrop-container img {
+        width: 100%; /* Ensures proper scaling */
+        height: 100%; /* Fills the container */
+        object-fit: cover; /* Prevents stretching */
+    }
 }
