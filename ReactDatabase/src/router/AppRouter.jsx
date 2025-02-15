@@ -1,3 +1,10 @@
+/* 
+ Some Notes, To Run this server locally, you need npm install the react splide
+ otherwise the package will not load and it will break everything.
+
+$ npm install @splidejs/react-splide  */
+
+
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
