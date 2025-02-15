@@ -4,9 +4,12 @@ import { useState, useEffect } from "react";
 import { IMG_URL } from "../globals/global";
 import { Link } from "react-router-dom";
 import Heart from "../assets/Heart.svg";
+import { useNavigate } from "react-router-dom";
+import { formatRating, formatReleaseDate } from "../utilities/toolbelts";
 
 function PageFavourites() {
     const [favorites, setFavorites] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Retrieve favorites from local storage
@@ -56,10 +59,22 @@ function PageFavourites() {
                             <article className="MovieContainer2">
                                 {favorites.map((movie) => (
                                     <div key={movie.id} className="favorite-movie">
-                                        <img
-                                            src={`${IMG_URL}w342${movie.poster_path}`}
-                                            alt={movie.title}
-                                            className="favorite-movie-image"/>
+                                        <img src={`${IMG_URL}w342${movie.poster_path}`}alt={movie.title}className="favorite-movie-image"/>
+                                    
+                                        <div className="backdrop2" onClick={() => navigate(`/movie/${movie.id}`)} >
+                                            <div className="title-and-release" >
+                                                {/* <h3>{movie.title}</h3> */}
+                                                <p>{movie.overview}</p>
+                                                <p>{formatReleaseDate(movie.release_date)}</p>
+                                            </div>
+                                            <div className="rating-and-favorite">
+                                            <p id="rating">⭐&nbsp;{formatRating(movie.vote_average)}</p>
+                                            </div>
+                                        </div>
+
+
+                                       
+                                        
                                     </div>
                                 ))}
                             </article>

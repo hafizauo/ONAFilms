@@ -48,6 +48,7 @@
         box-sizing: border-box;
         cursor: pointer;
         transition: opacity 0.2s ease-in-out;
+        border-radius: 0px 0px 0px 0px;
     }
 
     

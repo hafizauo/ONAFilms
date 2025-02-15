@@ -90,5 +90,20 @@ function getPersonImage(id) {
         });
 }
 
+// Function for getting movie trailer
+function getMovieTrailer(movie_id) {
+    return fetch(`${BASE_URL}/movie/${movie_id}/videos?api_key=${API_KEY}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Newwork response was not ok");
+            }
+            return response.json();
+        })
+        .catch((error) => {
+            console.error("Error fetching movie by ID:", error);
+            throw error;
+        });
+}
 
-export { getPopularMovies, getTopRatedMovies, getUpComingMovies, getNowPlayingMovies, getMovieById, getPersonImage };
+
+export { getPopularMovies, getTopRatedMovies, getUpComingMovies, getNowPlayingMovies, getMovieById, getPersonImage, getMovieTrailer };

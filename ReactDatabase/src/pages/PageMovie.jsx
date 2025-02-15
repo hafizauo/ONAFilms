@@ -4,6 +4,7 @@ import { getMovieById, getPersonImage } from "../utilities/api";
 import { IMG_URL } from "../globals/global";
 import { formatReleaseDate } from "../utilities/toolbelts";
 import "./PageMovie.css";
+import { getMovieTrailer } from "../utilities/api";
 
 function PageMovie() {
   const [movie, setMovie] = useState(null);
@@ -12,6 +13,30 @@ function PageMovie() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
+  const [trailer, setTrailter] = useState(null);
+  const [trailerKey, setTrailterKey] = useState([]);
+
+
+
+  // trailer ahh
+
+    useEffect(() => {
+      getMovieTrailer(id)
+          .then((trailer) => {
+              // console.log(trailer.results[0]);
+              trailer.results.map((array) => {
+                  if (array.type == "Trailer") {
+                      console.log("This is the correct type")
+                      console.log(array.key);
+                      setTrailterKey(array.key);
+                  }
+              })
+          })
+          .catch((error) => {
+              alert("Error fetching movie trailer by ID");
+              console.error("Error fetching movie trailer by ID:", error);
+          });
+  }, [id]);
 
   // Fetch movie details
   useEffect(() => {
@@ -84,10 +109,27 @@ function PageMovie() {
           </>
         )}
       </div>
+
+      <div className="trailer-container">
+      <h1 className="movie-details"> Movie Trailer</h1>
+        {trailerKey && (
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${trailerKey}`}
+            title="YouTube video player"
+            frameBorder="0" allowFullScreen
+          ></iframe>
+        )}
+      </div>
       
       {/* Cast Section */}
       <h2 className="cast-heading">Cast</h2>
+
+      
       <div className="cast-container">
+        
+        
         {personImage &&
           personImage.map((path, index) => (
             path !== null ? (

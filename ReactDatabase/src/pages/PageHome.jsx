@@ -40,6 +40,9 @@ function PageHome() {
             .catch((error) => alert("Error fetching now playing movies", error));
     }, []);
 
+
+
+    // ChatGPT Code of Implementing Splide Slider.js
     // Splide options with proper responsiveness
     const splideOptions = {
         type: "loop",
