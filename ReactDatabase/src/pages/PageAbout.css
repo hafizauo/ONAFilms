@@ -1,0 +1,120 @@
+
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.MovieContainer {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.LogoContainerLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LogoAbout {
+    width: 7rem;
+    height: 7rem;
+}
+
+.DividerLine {
+    height: 1px;
+    background-color: white;
+    width: 85%;
+    margin: 20px 0;
+}
+
+.AboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.ArticleAbout1 p, .ArticleAbout2 p{
+    color: white;
+    text-align: left;
+    font-family: 'NeueM-Thin';
+    letter-spacing: 0px;
+    font-size: 1.4rem;
+}
+
+.H1-Intro, .H2-Intro{
+    text-align: center;
+    font-family: 'OverusedG-Bold';
+    color: white;
+    margin: 0;
+}
+
+.HighlightAbout {
+    font-family: 'NeueM-Med';
+}
+
+.tmdb-attribution {
+    color: white;
+    font-family: 'OverusedG-Med';
+    text-align: center;
+}
+
+/* ⇣⇣ TABLET SETTINGS ⇣⇣ */
+@media (min-width: 35em) {
+    .MovieContainer {
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .LogoAbout {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .AboutContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+}
+
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 75em) {
+    .MovieContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+    }
+
+    .LogoAbout {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .AboutContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    .LogoContainerLine {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    } 
+
+    .DividerLine {
+        height: 90%;
+        background-color: white;
+        width: 1px;
+        margin: 20px 0;
+    }
+
+
+}

@@ -1,0 +1,102 @@
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.dropdowns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* Remove solid white to blend with background */
+}
+
+.dropdowns select {
+    display: flex;
+    width: 70%;
+    padding: 12px 15px;
+    border: 0.1px solid #0f0f0f35; /* Highlight border */
+    border-radius: 10px;
+
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    outline: none; /* Remove default focus outline */
+
+    font-family: 'OverusedG-Bold';
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.dropdowns select:hover {
+    background-color: #ffffff6e; /* Red background on hover */
+    color: rgb(0, 0, 0); /* White text */
+    border-color: #000000;
+}
+
+
+.dropdowns select::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Red scrollbar */
+    border-radius: 10px;
+}
+
+.dropdowns select option {
+    font-size: 1.2rem;
+    padding: 10px;
+    background: white;
+    color: rgb(40, 27, 39);
+}
+
+.Header2 {
+    display: none;
+}
+
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+    .dropdowns {
+        display: none;
+    }
+
+    .Header2 {
+        list-style: none;
+        display: flex;
+        text-decoration: none; 
+        font-family: 'NonB-Extend-SemiBold';
+        letter-spacing: 0.5px;
+        background-color: white;
+        justify-content: center
+    }
+
+    .Header2 ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Header2 ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .Header2 ul a {
+        color: rgb(0, 0, 0);   
+        text-decoration: none; 
+        transition: 0.4s;
+        padding: 0px 20px;
+        display: inline-block;
+
+        font-family: 'OverusedG-Bold';
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        letter-spacing: 0px; 
+    }
+
+    .Header2 a:hover {
+        color: rgba(35, 35, 35, 0.322);
+    }
+
+    
+}

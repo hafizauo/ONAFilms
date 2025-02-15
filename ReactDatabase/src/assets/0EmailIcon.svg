@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="46" viewBox="0 0 50 46">
+  <g id="Group_19" data-name="Group 19" transform="translate(-48 -241)">
+    <g id="Email_icon_background" data-name="Email icon background" transform="translate(48 241)" fill="none" stroke="#000" stroke-width="1" opacity="0.25">
+      <rect width="50" height="46" rx="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="45" rx="9.5" fill="none"/>
+    </g>
+    <path id="Mail_Icon" data-name="Mail Icon" d="M18.991,6H4.777A1.774,1.774,0,0,0,3.009,7.777L3,18.438a1.782,1.782,0,0,0,1.777,1.777H18.991a1.782,1.782,0,0,0,1.777-1.777V7.777A1.782,1.782,0,0,0,18.991,6Zm0,12.438H4.777V9.554L11.884,14l7.107-4.442Zm-7.107-6.219L4.777,7.777H18.991Z" transform="translate(61.116 250.893)" fill="#fff"/>
+  </g>
+</svg>

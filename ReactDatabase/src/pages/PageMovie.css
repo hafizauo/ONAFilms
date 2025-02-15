@@ -1,0 +1,237 @@
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.SingleMovie {
+    margin-top: 3rem;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.MovieDetailsInfo {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.SubDetailsInfo1 {
+    font-size: 1.3rem;
+    font-family: 'NeueM-Med';
+}
+
+.SubDetailsInfo2 {
+    font-family: 'NeueM-Thin';
+    font-size: 1.4rem;
+}
+
+.HeartFunction2 {
+    display: flex;
+    background: transparent;
+    position: relative;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+}
+
+/* Movie Details Section */
+.SingleMovieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+.SingleMovieContainer img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.SingleMovieContainer h2 {
+    font-size: 2rem;
+}
+
+/* Trailer Section */
+.trailer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.trailer-container iframe {
+    border-radius: 20px;
+}
+
+
+/* Cast Section */
+
+/* 🎬 Default (Mobile) */
+.cast-heading {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px 0;
+    color: white;
+}
+
+/* Cast Card (Mobile) */
+.cast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.cast-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cast Images */
+.cast-card img {
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Cast Names */
+.cast-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 8px;
+    color: white;
+}
+
+/* Character Names */
+.character-name {
+    font-weight: normal;
+    display: block;
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+
+
+/* ⇣⇣ TABLET SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+    .SingleMovieContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .SingleMovieContainer img {
+        max-width: 370px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .MovieDetailsInfo h2, .MovieDetailsInfo p {
+        text-align: left;
+    }
+
+
+    .SingleMovieContainer h2{
+        font-size: 2.5rem;
+        font-family: 'OverusedG-Bold';
+    }
+    
+    .SubDetailsInfo1 {
+        font-size: 1.5rem;
+        font-family: 'NeueM-Med';
+    }
+
+    .SubDetailsInfo2 {
+        font-family: 'NeueM-Thin';
+        font-size: 1.5rem;
+    }
+
+    .HeartFunction2 {
+        display: flex;
+        background: transparent;
+        position: relative;
+        border: none;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .trailer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+}
+
+
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 75em) {
+
+    
+    .SingleMovie {
+        margin-top: 10rem;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .SingleMovieContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+
+    .SingleMovieContainer img {
+        max-width: 600px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .MovieDetailsInfo {
+        max-width: 600px;
+        padding: 10px;
+    }
+
+    .SubDetailsInfo1 {
+        font-size: 1.8rem;
+        font-family: 'NeueM-Med';
+    }
+
+    .SubDetailsInfo2 {
+        font-family: 'NeueM-Thin';
+        font-size: 1.7rem;
+    }
+
+    .trailer-container {
+        position: relative;
+        width: 80%; 
+        max-width: 900px; 
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 12px; 
+    }
+
+    .trailer-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+
+}

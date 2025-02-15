@@ -1,0 +1,194 @@
+
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.MainLC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.MainLC2 {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainLC2 h1 {
+  font-family: 'OverusedG-Bold';
+  color: white;
+  margin: 0;
+}
+
+.MainLC2 p {
+  font-size: 1rem;
+  font-family: 'NeueM-Med';
+  color: white;
+}
+
+.FormStandalone p {
+  font-family: 'OverusedG-Med';
+  color: white;
+  margin: 0;
+}
+
+.Highlight {
+  color: rgb(90, 255, 204);
+}
+
+
+.FormContainer form input {
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid #00000041; /* Minimal border color */
+ 
+  padding: 20px;
+  width: 80%;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'NeueM-Thin';
+}
+
+.FormContainer form input:focus {
+  outline: none; /* Remove the outline on focus */
+}
+
+.FormContainer form input::placeholder {
+  color: rgba(255, 255, 255, 0.616);
+  font-family: 'NeueM-Thin';
+}
+
+.FormContainer form, .EndContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormContainer form {
+  gap: 20px;
+}
+
+.FormContainer {
+  background-color: #755971;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.FormSubCon1, .FormSubCon2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.EndContainer p {
+  color: white;
+  font-family: 'NeueM-Med';
+}
+
+.LoginButton2 {
+  padding: 10px 20px;  
+  border: none;
+  border-radius: 10px; 
+  background-color: #4b2c6f; 
+  color: white;
+  font-size: 1rem;
+  width: 75%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  touch-action: manipulation;
+}
+
+.FormStandalone button {
+  width: 200px;
+  height: 50px;
+  font-family: 'OverusedG-Med';
+  text-transform: uppercase;
+}
+
+.OnaLogo2 {
+  width: 12rem;
+  height: 12rem;
+}
+
+.FormIcon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.SvgIcons {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+/* ⇣⇣ TABLET SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+  .MainLC {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    gap: 3rem;
+  }
+
+  .FormContainer {
+    background-color: #755971;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .MainLC2 {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+
+}
+
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 75em) {
+  .MainLC {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    gap: 8rem;
+  }
+
+  .FormContainer {
+    background-color: #755971;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    height: 100vh;
+    width: 35vw;
+  }
+
+  .MainLC2 {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .OnaLogo2 {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .LoginButton2:hover {
+    background-color: rgba(90, 255, 203, 0.507);
+  }
+  
+
+}
