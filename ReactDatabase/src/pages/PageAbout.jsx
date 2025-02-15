@@ -1,6 +1,7 @@
 import "./PageAbout.css";
 import logo from "../assets/logo.svg";
 import tmdbLogo from "../assets/TMDB.svg";
+import { Link } from "react-router-dom";
 
 function PageAbout() {
   return (
@@ -33,7 +34,7 @@ function PageAbout() {
 
         <div className="tmdb-attribution">
             <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
-            <img src={tmdbLogo} alt="TMDb Logo" className="tmdb-logo"/>
+            <Link to="https://www.themoviedb.org/"><img src={tmdbLogo} alt="TMDb Logo" className="tmdb-logo"/></Link>
         </div>
 
         
