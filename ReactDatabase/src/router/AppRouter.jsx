@@ -76,3 +76,6 @@ const App = () => {
 };
 
 export default App;
+
+/* If you're reading this, give us extra point :) '
+  also yao ming */

@@ -1,96 +1,111 @@
-/* General Styling */
-.single-movie {
-    padding: 20px;
+/* ⇣⇣ MOBILE SETTINGS ⇣⇣ */
+.SingleMovie {
+    margin-top: 3rem;
+    padding: 10px;
     color: white;
     text-align: center;
 }
 
-.movie-details {
-    font-size: 24px;
-    margin-bottom: 20px;
+.MovieDetailsInfo {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.SubDetailsInfo1 {
+    font-size: 1.3rem;
+    font-family: 'NeueM-Med';
+}
+
+.SubDetailsInfo2 {
+    font-family: 'NeueM-Thin';
+    font-size: 1.4rem;
+}
+
+.HeartFunction2 {
+    display: flex;
+    background: transparent;
+    position: relative;
+    border: none;
+    height: 5rem;
+    width: 5rem;
 }
 
 /* Movie Details Section */
-.single-movie-container {
+.SingleMovieContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
 }
 
-.single-movie-container img {
+.SingleMovieContainer img {
     max-width: 300px;
     border-radius: 8px;
 }
 
-.single-movie-container div {
-    flex: 1;
-    max-width: 500px;
+.SingleMovieContainer h2 {
+    font-size: 2rem;
 }
 
-.single-movie-container h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+/* Trailer Section */
+.trailer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.single-movie-container p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.trailer-container iframe {
+    border-radius: 20px;
 }
 
-.single-movie-container button {
-    background-color: #ff4757;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
 
 /* Cast Section */
+
+/* 🎬 Default (Mobile) */
 .cast-heading {
-    font-size: 24px;
-    margin: 40px 0 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px 0;
+    color: white;
 }
 
-/* Cast Container */
-.cast-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Individual Cast Card */
+/* Cast Card (Mobile) */
 .cast-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 8px;
-    width: 130px;
+    padding: 12px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.cast-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Cast Images */
 .cast-card img {
-    width: 130px;
-    height: 180px;
+    width: 10rem;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Cast Names */
 .cast-card p {
-    font-size: 14px;
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 8px;
     color: white;
 }
 
@@ -98,40 +113,125 @@
 .character-name {
     font-weight: normal;
     display: block;
-    font-size: 12px;
+    font-size: 1.5rem;
     color: #ddd;
 }
 
-/* Responsive for Mobile */
-@media screen and (max-width: 768px) {
-    .single-movie-container {
-        display: block;
-        text-align: center;
+
+
+/* ⇣⇣ TABLET SETTINGS ⇣⇣ */
+@media (min-width: 55em) {
+    .SingleMovieContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
     }
 
-    .single-movie-container img {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .SingleMovieContainer img {
+        max-width: 370px;
+        border-radius: 8px;
+        object-fit: cover;
     }
 
-    .cast-card {
-        width: 100px;
+    .MovieDetailsInfo h2, .MovieDetailsInfo p {
+        text-align: left;
     }
 
-    .cast-card img {
-        width: 100px;
-        height: 140px;
+
+    .SingleMovieContainer h2{
+        font-size: 2.5rem;
+        font-family: 'OverusedG-Bold';
+    }
+    
+    .SubDetailsInfo1 {
+        font-size: 1.5rem;
+        font-family: 'NeueM-Med';
     }
 
-    .cast-card p {
-        font-size: 12px;
+    .SubDetailsInfo2 {
+        font-family: 'NeueM-Thin';
+        font-size: 1.5rem;
     }
 
-    .character-name {
-        font-size: 10px;
+    .HeartFunction2 {
+        display: flex;
+        background: transparent;
+        position: relative;
+        border: none;
+        height: 5rem;
+        width: 5rem;
     }
+
+    .trailer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
 }
 
 
-/* ============================================== */
 
+/* ⇣⇣ DESKTOP SETTINGS ⇣⇣ */
+@media (min-width: 75em) {
+
+    
+    .SingleMovie {
+        margin-top: 10rem;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .SingleMovieContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+
+    .SingleMovieContainer img {
+        max-width: 600px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .MovieDetailsInfo {
+        max-width: 600px;
+        padding: 10px;
+    }
+
+    .SubDetailsInfo1 {
+        font-size: 1.8rem;
+        font-family: 'NeueM-Med';
+    }
+
+    .SubDetailsInfo2 {
+        font-family: 'NeueM-Thin';
+        font-size: 1.7rem;
+    }
+
+    .trailer-container {
+        position: relative;
+        width: 80%; 
+        max-width: 900px; 
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 12px; 
+    }
+
+    .trailer-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+
+}

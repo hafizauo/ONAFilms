@@ -88,25 +88,30 @@ function PageMovie() {
   };
 
   return (
-    <div className="single-movie">
-      <h1 className="movie-details"> Movie Details</h1>
-      <div className="single-movie-container">
+    <div className="SingleMovie">
+      <h1 className="MovieDetails"> Movie Details</h1>
+      <div className="SingleMovieContainer">
         {movie && (
           <>
             <img src={`${IMG_URL}w780${movie.poster_path}`} alt={movie.title} />
-            <div>
+            <div className="MovieDetailsInfo">
               <h2>{movie.title}</h2>
-              <p>{formatReleaseDate(movie.release_date)}</p>
-              <p id="rating">⭐&nbsp;{formatRating(movie.vote_average)}</p>
-              <p>{movie.runtime} min</p>
-              <p>{movie.overview}</p>
-              <button onClick={handleFavoriteClick}>
-                {isFavorite ? "❤️" : "🤍"}
+              <p className="SubDetailsInfo1">{movie.overview}</p>
+              <p className="SubDetailsInfo2">{formatReleaseDate(movie.release_date)}</p>
+              <p className="SubDetailsInfo2">{movie.runtime} minutes</p>
+              <p className="SubDetailsInfo2" id="rating">⭐&nbsp;{formatRating(movie.vote_average)}</p>
+
+               <button className="HeartFunction2" onClick={handleFavoriteClick}>
+                    <img src={isFavorite ? "https://img.icons8.com/ios-filled/50/FF0000/like--v1.png" : "https://img.icons8.com/ios/50/FF0000/like--v1.png"} />
               </button>
+
             </div>
           </>
         )}
       </div>
+
+
+      <br/><br/><br/><br/><br/> {/* Extra Spacing */}
 
       {/* ✅ Restored Trailer Section */}
       <div className="trailer-container">
@@ -121,12 +126,14 @@ function PageMovie() {
             allowFullScreen
           ></iframe>
         ) : (
-          <p>No trailer available.</p>
+          <p>No trailer available.</p> 
         )}
       </div>
 
+      <br/><br/><br/><br/><br/> {/* Extra Spacing */}
+
       {/* Cast Section */}
-      <h2 className="cast-heading">Cast</h2>
+      <h1 className="cast-heading">Cast</h1>
 
       {/* ✅ Splide Cast Slider */}
       <Splide
@@ -139,10 +146,12 @@ function PageMovie() {
           pagination: false,
           autoplay: true,
           breakpoints: {
-            800: { perPage: 4, gap: "1rem" }, // Tablet
-            600: { perPage: 3, gap: "1rem" }, // Small Tablet
-            400: { perPage: 2, gap: "1rem" }, // Mobile
-            320: { perPage: 1, gap: "0.5rem" }, // Extra Small Screens
+            1300: { perPage: 5, gap: "1rem" }, // Tablet
+            1100: { perPage: 4, gap: "1rem" }, // Tablet
+            900: { perPage: 3, gap: "1rem", arrows: false }, // Tablet
+            750: { perPage: 2, gap: "1rem", arrows: false }, // Small Tablet
+            500: { perPage: 1, gap: "1rem", arrows: false}, // Mobile
+            320: { perPage: 1, gap: "0.5rem", arrows: false }, // Extra Small Screens
           },
         }}
       >
@@ -162,8 +171,14 @@ function PageMovie() {
             ) : null
           )}
       </Splide>
+
+      <br/><br/><br/><br/><br/> {/* Extra Spacing */}
+
     </div>
+    
   );
 }
+
+
 
 export default PageMovie;
