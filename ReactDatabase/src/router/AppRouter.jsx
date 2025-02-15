@@ -15,6 +15,7 @@ import PageFavourites from "../pages/PageFav";
 import PageMovie from "../pages/PageMovie";
 import LoginPage from "../pages/Login";
 import PageWelcome from "../pages/Welcome";
+import { APP_FOLDER_NAME } from "../globals/global";
 
 const AppRouter = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -69,7 +70,7 @@ const AppRouter = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>  
+    <BrowserRouter basename={`/${APP_FOLDER_NAME}`}>  
       <AppRouter />
     </BrowserRouter>
   );
