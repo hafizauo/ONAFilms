@@ -2,7 +2,8 @@
 ## ★ Welcome fellow coding enthusiasts ★
 
 ✦ This is a Mega React Movie Database Project using Vite & the TMDB Movie Api, ONA FILMS, made to be Responsive on all devices! <br>
-✦ Below are screenshots of What the Website looks like. Aall attributions have been given to TMDB on the website itself. <br>
+✦ Below are screenshots of What the Website looks like. All attributions have been given to TMDB on the website itself. <br>
+✦ Check Out The Live Site → aumar.xyz/ONA-Films/
 
 
 ⋆ If you'd like to take look at it yourself, 'Git Clone The Repo'; Login & Password is in the *Login.jsx* file. <br>
