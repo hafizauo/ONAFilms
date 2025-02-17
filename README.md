@@ -9,7 +9,9 @@ Below are screenshots of What the Website looks like. Aall attributions have bee
 - In essense, this project was created using the *React Router* rather than the regular default. 
 - We used Plugins such as: Splide.js, so you may need to install a package before running the Project.
 
-- When running, make sure you're in the Project Folder /ReactDatabase/ , then run pnpm run dev.
+- Make sure you have pulled the latest updates of main as we will be tweaking this project with updates.
+- When running, make sure you're in the Project Folder /ReactDatabase/ , then run pnpm run dev. 
 - If there are any errors, make sure you have all packages installed (node_modules).
+
 
 [ Happy Developing! :) ]
