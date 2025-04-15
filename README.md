@@ -6,11 +6,12 @@
 ✦ Check Out The Live Site → https://aumar.xyz/ONA-Films/
 
 
-⋆ If you'd like to take look at it yourself, 'Git Clone The Repo'; Login & Password is in the *Login.jsx* file. <br>
+⋆ If you'd like to take look at it yourself, 'Git Clone The Repo'; <br>
 ⋆ In essence, this project was created using the <ins>**React Router, TMDB Movie API & Splidejs.**</ins> <br>
 
 ⁎ SplideJS Package Installation: https://splidejs.com/integration/react-splide/ <br>
 ⁎ TMDB Movie API: https://developer.themoviedb.org/docs/getting-started
+⁎ No Login & Password needed, just click login and you're good to go.
 
 - Make sure you: <br>
   - Have pulled the latest updates of main as we will be tweaking this project with updates. <br>
@@ -21,7 +22,6 @@
 
 
 ## ★ Project Screenshots ★
-
 
 ![image](https://github.com/user-attachments/assets/d0295d5e-0b5e-4cd1-bd72-7a930e3a0fba)
 ![image](https://github.com/user-attachments/assets/cd48e704-3445-4a54-8da7-0277e7b253c0)
