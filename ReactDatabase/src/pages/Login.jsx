@@ -17,7 +17,7 @@ const LoginPage = ({ onLogin }) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (username === 'Onafilms20' && password === 'onafilms20') {
+    if (username === '' && password === '') {
       onLogin(true);
     } else {
       alert('Invalid username or password');
