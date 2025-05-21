@@ -410,7 +410,7 @@
 
    /* !! Main Tags For (Welcome & Login Pages) */
    main {
-    height: 100vh;
+    height: auto;
    }
 
    
