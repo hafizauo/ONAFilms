@@ -70,12 +70,12 @@ pnpm dev
 - Push to branch (git push origin feature/YourFeature)
 - Open a Pull Request
 
-### 7. License
+## 7. License
 Distributed under the MIT License. See LICENSE for details.
 
-### 8. Contact
+## 8. Contact
 > Portfolio: aumar.xyz <br>
 > Email: aakifumar55@gmail.com  <br>
 > Business Inquiries: therealauvance@gmail.com
 
-### 9. Screenshots
+## 9. Screenshots
