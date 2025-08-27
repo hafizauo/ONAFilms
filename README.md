@@ -17,23 +17,23 @@ Responsive, fast, and fun — explore movies, trending releases, and more with a
 - [Contact](#contact)
 
 
-## 1. About
+## About
 ONA Films is a **React-based Movie Database app** that connects to the **TMDB API** to display movie information, trailers, and trending lists.  
 It was built as part of a **BCIT React project** and designed to be **fully responsive across devices**.   
 
-## 2. Features
+## Features
 - 🎥 Browse trending, popular, and top-rated movies  
 - 🔍 Search movies by title  
 - 🖼️ Responsive layout (desktop, tablet, mobile)  
 - 🎠 Smooth carousels powered by SplideJS  
 - ⚡ Fast & optimized with Vite bundler  
 
-## 3. Tech Stack
+## Tech Stack
 - **Frontend**: React, Vite, React Router, Tailwind CSS  
 - **API**: [TMDB API](https://developer.themoviedb.org/docs/getting-started)  
 - **Other**: SplideJS, pnpm  
 
-## 4. Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js v18+  
@@ -54,7 +54,7 @@ pnpm install
 # Run the dev server
 pnpm dev
 ```
-## 5. Usage
+## Usage
 
 - Access the app at http://localhost:3000 during development.
 - Quickly Create your personalized meal locally. (Backend coming out soon!)
@@ -64,7 +64,7 @@ pnpm dev
 None at the moment :( <br>
 Check Back Later!
 
-## 6. Contributing
+## Contributing
 
 👑 Contributions are welcome! 👑
 
@@ -74,12 +74,10 @@ Check Back Later!
 - Push to branch (git push origin feature/YourFeature)
 - Open a Pull Request
 
-## 7. License
+## License
 Distributed under the MIT License. See LICENSE for details.
 
-## 8. Contact
+## Contact
 > Portfolio: aumar.xyz <br>
 > Email: aakifumar55@gmail.com  <br>
 > Business Inquiries: therealauvance@gmail.com
-
-## 9. Screenshots
