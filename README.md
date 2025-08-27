@@ -6,15 +6,15 @@ Responsive, fast, and fun — explore movies, trending releases, and more with a
 👉 **Live Demo:** [ONA Films](https://aumar.xyz/ONA-Films/)  
 
 ## 📖 Table of Contents
-- [1. About](#about)
-- [2. Features](#features)
-- [3. Tech Stack](#tech-stack)
-- [4. Getting Started](#getting-started)
-- [5. Usage](#usage)
-- [6. Contributing](#contributing)
-- [7. License](#license)
-- [8. Contact](#contact)
-- [9. Screenshots](#screenshots)
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Snapshots](#snapshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 
 ## 1. About
@@ -59,6 +59,10 @@ pnpm dev
 - Access the app at http://localhost:3000 during development.
 - Quickly Create your personalized meal locally. (Backend coming out soon!)
 - Search for gluten-free products & track meals.
+
+## Snapshots
+None at the moment :( <br>
+Check Back Later!
 
 ## 6. Contributing
 
