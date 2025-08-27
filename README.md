@@ -1,32 +1,81 @@
-# BCIT - React Movie Database
-## ★ Welcome fellow coding enthusiasts ★
+# 🎬 ONA Films  
 
-✦ This is a Mega React Movie Database Project using Vite & the TMDB Movie Api, ONA FILMS, made to be Responsive on all devices! <br>
-✦ Below are screenshots of What the Website looks like. All attributions have been given to TMDB on the website itself. <br>
-✦ Check Out The Live Site → https://aumar.xyz/ONA-Films/
+**A Mega React Movie Database built with Vite & the TMDB API.**  
+Responsive, fast, and fun — explore movies, trending releases, and more with a sleek UI powered by React. 
 
+👉 **Live Demo:** [ONA Films](https://aumar.xyz/ONA-Films/)  
 
-⋆ If you'd like to take look at it yourself, 'Git Clone The Repo'; <br>
-⋆ In essence, this project was created using the <ins>**React Router, TMDB Movie API & Splidejs.**</ins> <br>
-
-⁎ SplideJS Package Installation: https://splidejs.com/integration/react-splide/ <br>
-⁎ TMDB Movie API: https://developer.themoviedb.org/docs/getting-started
-⁎ No Login & Password needed, just click login and you're good to go.
-
-- Make sure you: <br>
-  - Have pulled the latest updates of main as we will be tweaking this project with updates. <br>
-  - Have node_modules & splide.js package installed. <br>
-  - You're in the Project Folder /ReactDatabase/ to run the Project using pnpm run dev or npm run dev.
-
-[ Happy Developing! :) ]
+## 📖 Table of Contents
+- [1. About](#about)
+- [2. Features](#features)
+- [3. Tech Stack](#tech-stack)
+- [4. Getting Started](#getting-started)
+- [5. Usage](#usage)
+- [6. Contributing](#contributing)
+- [7. License](#license)
+- [8. Contact](#contact)
+- [9. Screenshots](#screenshots)
 
 
-## ★ Project Screenshots ★
+## 1. About
+ONA Films is a **React-based Movie Database app** that connects to the **TMDB API** to display movie information, trailers, and trending lists.  
+It was built as part of a **BCIT React project** and designed to be **fully responsive across devices**.   
 
-![image](https://github.com/user-attachments/assets/d0295d5e-0b5e-4cd1-bd72-7a930e3a0fba)
-![image](https://github.com/user-attachments/assets/cd48e704-3445-4a54-8da7-0277e7b253c0)
-![image](https://github.com/user-attachments/assets/4ac61381-401b-4070-acfd-b9311391e9e2)
-![image](https://github.com/user-attachments/assets/74b1bf5a-980b-4df6-a636-25184491c147)
-![image](https://github.com/user-attachments/assets/cc30fda2-2a16-4d58-a1f4-311d7dd1f05f)
+## 2. Features
+- 🎥 Browse trending, popular, and top-rated movies  
+- 🔍 Search movies by title  
+- 🖼️ Responsive layout (desktop, tablet, mobile)  
+- 🎠 Smooth carousels powered by SplideJS  
+- ⚡ Fast & optimized with Vite bundler  
 
+## 3. Tech Stack
+- **Frontend**: React, Vite, React Router, Tailwind CSS  
+- **API**: [TMDB API](https://developer.themoviedb.org/docs/getting-started)  
+- **Other**: SplideJS, pnpm  
 
+## 4. Getting Started
+
+### Prerequisites
+- Node.js v18+  
+- pnpm or npm/yarn  
+- TMDB API key (free to create at [TMDB](https://developer.themoviedb.org/))  
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/username/ONA-Films.git
+
+# Go into project folder
+cd ONA-Films
+
+# Install dependencies
+pnpm install
+
+# Run the dev server
+pnpm dev
+```
+## 5. Usage
+
+- Access the app at http://localhost:3000 during development.
+- Quickly Create your personalized meal locally. (Backend coming out soon!)
+- Search for gluten-free products & track meals.
+
+## 6. Contributing
+
+👑 Contributions are welcome! 👑
+
+- Fork the repo
+- Create a feature branch (git checkout -b feature/YourFeature)
+- Commit changes (git commit -m "Add YourFeature")
+- Push to branch (git push origin feature/YourFeature)
+- Open a Pull Request
+
+### 7. License
+Distributed under the MIT License. See LICENSE for details.
+
+### 8. Contact
+> Portfolio: aumar.xyz <br>
+> Email: aakifumar55@gmail.com  <br>
+> Business Inquiries: therealauvance@gmail.com
+
+### 9. Screenshots
